@@ -1,6 +1,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="Suit docs" verbose="1" thread-count="1" parallel="false">
+
+    <listeners>
+        <listener class-name = "appmanager.CustomReporter" />
+    </listeners>
+
     <test name="SupPortal REST API" thread-count="1"  parallel="false">
         <classes>
             <!--<class name="tests.AuthenticationLogInTests"/>-->
