@@ -1,0 +1,66 @@
+#
+# Project specific excludes
+#
+#
+# Default excludes
+#
+
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
+
+# Maven
+target/
+
+# Gradle
+.gradle
+
+# IntelliJ project files
+*.iml
+*.iws
+*.ipr
+.idea/
+
+# eclipse project file
+.settings/
+.classpath
+.project
+.eclipse-pmd
+
+# NetBeans specific
+nbproject/private/
+build/
+${buildDir}/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
+
+#Output
+API/bin
+API/test-output
+Application/bin
+Application/test-output
+Model/bin
+Model/test-output
+/.apt_generated/

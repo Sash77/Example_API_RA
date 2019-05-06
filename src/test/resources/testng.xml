@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suit docs" verbose="1" thread-count="1" parallel="false">
+    <test name="SupPortal REST API" thread-count="1"  parallel="false">
+        <classes>
+            <!--<class name="tests.AuthenticationLogInTests"/>-->
+        </classes>
+    </test>
+</suite>
