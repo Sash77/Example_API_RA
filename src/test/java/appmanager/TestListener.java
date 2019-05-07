@@ -18,16 +18,6 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
-        ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
-        String messageToLog;
-        if (result!=null) {
-            String className = result.getTestContext().getAttribute("className").toString();
-            messageToLog = app.getLogMessageByClass(className);
-        }else {
-            messageToLog = "Unknown";
-        }
-        Allure.addAttachment(app.getCheck(), messageToLog);
-        app.logError(app.getCheck());
 
     }
 

@@ -2,6 +2,8 @@ package appmanager;
 
 import api.*;
 import ch.qos.logback.classic.Level;
+import model.specification.SpecificationRequest;
+import model.specification.SpecificationResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,6 +18,8 @@ public class ApplicationManager {
     private final Properties properties;
 
     private String apiBaseURL;
+    private int apiPort;
+    private String docID;
     private String apiToken;
 
     private JavaRunCommand javaRunCommand;
@@ -24,9 +28,8 @@ public class ApplicationManager {
 
     private String checkCurrent;
 
-    private DocumentAPI documentAPI;
-    private OverViewAPI overViewAPI;
-    private WorkListAPI workListAPI;
+    private SpecificationRequest specificationRequest;
+    private SpecificationResponse specificationResponse;
 
 
     public ApplicationManager() {
@@ -41,10 +44,12 @@ public class ApplicationManager {
         properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties",target))));
 
         apiBaseURL = properties.getProperty("auth.URL");
-        documentAPI = new DocumentAPI(this);
-        workListAPI = new WorkListAPI(this);
-        overViewAPI = new OverViewAPI(this);
+        apiPort = Integer.parseInt(properties.getProperty("auth.Port"));
+        docID = properties.getProperty("data.docId");
+
         javaRunCommand = new JavaRunCommand();
+        specificationRequest = new SpecificationRequest(this);
+        specificationResponse = new SpecificationResponse(this);
 
     }
 
@@ -56,46 +61,24 @@ public class ApplicationManager {
         return apiBaseURL;
     }
 
+    public int getApiPort() {
+        return apiPort;
+    }
+
     public String getApiToken() {
         return apiToken;
     }
 
-    public String getLogMessageByClass(String className){
-        String currentMessage = "";
-
-        if (className.contains("DocumentAPI")){
-
-            currentMessage = getDocumentAPI()
-                    .getResult()
-                    .getMessageToLog();
-
-        }else if (className.contains("OverViewAPI")){
-
-            currentMessage = getOverViewAPI()
-                    .getResult()
-                    .getMessageToLog();
-
-        }else if (className.contains("WorkListAPI")){
-
-            currentMessage = getWorkListAPI()
-                    .getResult()
-                    .getMessageToLog();
-
-        }
-
-        return currentMessage;
+    public SpecificationRequest getSpecificationRequest() {
+        return specificationRequest;
     }
 
-    public DocumentAPI getDocumentAPI() {
-        return documentAPI;
+    public SpecificationResponse getSpecificationResponse() {
+        return specificationResponse;
     }
 
-    public OverViewAPI getOverViewAPI() {
-        return overViewAPI;
-    }
-
-    public WorkListAPI getWorkListAPI() {
-        return workListAPI;
+    public String getDocID() {
+        return docID;
     }
 
     public JavaRunCommand getJavaRunCommand() {

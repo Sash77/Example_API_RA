@@ -1,9 +1,9 @@
-package model.helpers;
+package model.entity;
 
 import com.google.gson.annotations.SerializedName;
 import model.enums.OperatorType;
 
-public class HelperValueRange {
+public class EntityValueRange {
     @SerializedName("low")
     private double low;
 

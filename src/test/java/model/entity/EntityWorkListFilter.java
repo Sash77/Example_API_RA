@@ -1,9 +1,9 @@
-package model.helpers;
+package model.entity;
 
 import com.google.gson.annotations.SerializedName;
 import model.enums.OperatorType;
 
-public class HelperWorkListFilter {
+public class EntityWorkListFilter {
 
     @SerializedName("workListId")
     private String workListId;

@@ -1,9 +1,9 @@
-package model.helpers;
+package model.entity;
 
 import com.google.gson.annotations.SerializedName;
 import model.enums.MessageType;
 
-public class HelperMessage {
+public class EntityMessage {
 
     @SerializedName("id")
    private String id;

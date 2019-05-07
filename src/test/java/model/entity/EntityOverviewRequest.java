@@ -1,8 +1,8 @@
-package model.helpers;
+package model.entity;
 
 import com.google.gson.annotations.SerializedName;
 
-public class HelperOverviewRequest {
+public class EntityOverviewRequest {
     @SerializedName("documentType")
     private String documentType;
 

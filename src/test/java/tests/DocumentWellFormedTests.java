@@ -5,7 +5,7 @@ import appmanager.TestListener;
 import org.testng.annotations.Listeners;
 
 @Listeners(TestListener.class)
-public class OverviewListTests extends TestBase {
+public class DocumentWellFormedTests extends TestBase {
 
 
 

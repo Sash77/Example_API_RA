@@ -1,15 +1,13 @@
-package model.helpers;
+package model.entity;
 
 import com.google.gson.annotations.SerializedName;
-import com.google.gson.internal.LinkedTreeMap;
-import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import model.enums.AttributeType;
 import model.enums.ReferenceType;
 import model.enums.ValueType;
 
 import java.util.HashMap;
 
-public class HelperAttribute {
+public class EntityAttribute {
 
     @SerializedName("id")
     private String id;

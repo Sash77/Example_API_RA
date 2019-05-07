@@ -1,0 +1,8 @@
+[
+  {"testCase": "docHeader positive",
+    "contentKey":"content-type",
+    "contentValue":"application/json",
+    "acceptKey":"accept",
+    "acceptValue":"application/json"
+  }
+]
