@@ -17,4 +17,5 @@ public final class EndPoints {
 
     public static final String workListSelection= "/worklist/selection";
     public static final String workListTree= "/worklist/tree";
+
 }

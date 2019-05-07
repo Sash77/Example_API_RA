@@ -1,3 +1,16 @@
 [
-  {}
+  {"testCase": "docHeader negative content xml",
+    "code":415,
+    "contentKey":"content-type",
+    "contentValue":"application/xml",
+    "acceptKey":"accept",
+    "acceptValue":"application/json"
+  },
+  {"testCase": "docHeader negative accept xml",
+    "code":406,
+    "contentKey":"content-type",
+    "contentValue":"application/json",
+    "acceptKey":"accept",
+    "acceptValue":"application/xml"
+  }
 ]

@@ -18,6 +18,9 @@ public class EntityHeader {
     @SerializedName("acceptValue")
     private String acceptValue;
 
+    @SerializedName("code")
+    private int code;
+
     public String getTestCase() {
         return testCase;
     }
@@ -36,5 +39,9 @@ public class EntityHeader {
 
     public String getAcceptValue() {
         return acceptValue;
+    }
+
+    public int getCode() {
+        return code;
     }
 }
