@@ -1,9 +1,8 @@
 package dataprovider;
 
 import com.google.gson.Gson;
-import com.google.gson.internal.LinkedTreeMap;
 import com.google.gson.reflect.TypeToken;
-import model.entity.EntityHeader;
+import model.entity.EntityRequest;
 import org.testng.annotations.DataProvider;
 
 import java.io.BufferedReader;
@@ -26,9 +25,9 @@ public class DataProviderDocument {
                 line = reader.readLine();
             }
             Gson gson = new Gson();
-            List<EntityHeader> headers = gson.fromJson(json, new TypeToken<List<EntityHeader>>() {
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
             }.getType());
-            return headers.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
 
         }
     }
@@ -43,9 +42,9 @@ public class DataProviderDocument {
                 line = reader.readLine();
             }
             Gson gson = new Gson();
-            List<EntityHeader> headers = gson.fromJson(json, new TypeToken<List<EntityHeader>>() {
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
             }.getType());
-            return headers.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
 
         }
     }

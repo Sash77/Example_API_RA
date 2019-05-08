@@ -2,7 +2,7 @@ package api;
 
 import appmanager.ApplicationManager;
 import com.google.gson.internal.LinkedTreeMap;
-import model.entity.EntityHeader;
+import model.entity.EntityRequest;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.StatusLine;
@@ -190,9 +190,9 @@ public abstract class APIBase {
         return Integer.parseInt(resultHandle[0]);
     }
 
-    public HashMap<String, String> returnHeaderParams(EntityHeader entityHeader) {
+    public HashMap<String, String> returnHeaderParams(EntityRequest entityRequest) {
 
-        int qntItems = entityHeader.getHead().length;
+        int qntItems = entityRequest.getHead().length;
         HashMap<String, String> params = new HashMap<>();
 
         if (qntItems == 0) {
@@ -200,7 +200,7 @@ public abstract class APIBase {
             params.put("accept", "application/json");
         } else {
 
-            LinkedTreeMap<String, String>[] headMap = entityHeader.getHead();
+            LinkedTreeMap<String, String>[] headMap = entityRequest.getHead();
 
             if (qntItems != 0) {
                 for (int i = 0; i < qntItems; i++) {

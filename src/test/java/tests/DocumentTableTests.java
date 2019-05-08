@@ -5,7 +5,7 @@ import appmanager.TestBase;
 import appmanager.TestListener;
 import dataprovider.DataProviderDocument;
 import io.qameta.allure.Description;
-import model.entity.EntityHeader;
+import model.entity.EntityRequest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -13,7 +13,6 @@ import java.io.IOException;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.emptyArray;
 import static org.testng.Assert.assertEquals;
 
 @Listeners(TestListener.class)
@@ -21,7 +20,7 @@ public class DocumentTableTests extends TestBase {
 
     @Description("Document table positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTablePositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentTablePositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
@@ -30,7 +29,7 @@ public class DocumentTableTests extends TestBase {
 
     @Description("Document table negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTableNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentTableNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
@@ -39,7 +38,7 @@ public class DocumentTableTests extends TestBase {
 
 //    @Description("Document table positive")
 //    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentTablePositive(EntityHeader dataProvider) {
+//    public void testDocumentTablePositive(EntityRequest dataProvider) {
 //
 //        step(String.format("Test case: %s", dataProvider.getTestCase()));
 //
@@ -55,7 +54,7 @@ public class DocumentTableTests extends TestBase {
 //
 //    @Description("Document table negative")
 //    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentTableNegative(EntityHeader dataProvider) {
+//    public void testDocumentTableNegative(EntityRequest dataProvider) {
 //
 //        step(String.format("Test case: %s", dataProvider.getTestCase()));
 //

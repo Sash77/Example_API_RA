@@ -5,7 +5,7 @@ import appmanager.TestBase;
 import appmanager.TestListener;
 import dataprovider.DataProviderDocument;
 import io.qameta.allure.Description;
-import model.entity.EntityHeader;
+import model.entity.EntityRequest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -13,7 +13,6 @@ import java.io.IOException;
 
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.emptyArray;
 import static org.testng.Assert.assertEquals;
 
 @Listeners(TestListener.class)
@@ -21,7 +20,7 @@ public class DocumentLineSimpleTests extends TestBase {
 
         @Description("Document line simple positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentLineSimplePositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentLineSimplePositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
 
             step(String.format("Test case: %s", dataProvider.getTestCase()));
@@ -31,7 +30,7 @@ public class DocumentLineSimpleTests extends TestBase {
 
     @Description("Document line simple negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentLineSimpleNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentLineSimpleNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
@@ -41,7 +40,7 @@ public class DocumentLineSimpleTests extends TestBase {
 
 //    @Description("Document line simple positive")
 //    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentLineSimplePositive(EntityHeader dataProvider) {
+//    public void testDocumentLineSimplePositive(EntityRequest dataProvider) {
 //
 //        step(String.format("Test case: %s", dataProvider.getTestCase()));
 //
@@ -57,7 +56,7 @@ public class DocumentLineSimpleTests extends TestBase {
 //
 //    @Description("Document line simple negative")
 //    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentLineSimpleNegative(EntityHeader dataProvider) {
+//    public void testDocumentLineSimpleNegative(EntityRequest dataProvider) {
 //
 //        step(String.format("Test case: %s", dataProvider.getTestCase()));
 //

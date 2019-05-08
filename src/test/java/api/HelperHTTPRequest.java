@@ -1,7 +1,7 @@
 package api;
 
 import appmanager.ApplicationManager;
-import model.entity.EntityHeader;
+import model.entity.EntityRequest;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,14 +12,14 @@ public class HelperHTTPRequest extends APIBase {
         super(app);
     }
 
-    public int sendHeadersPost(EntityHeader header, String endPoint) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException {
+    public int sendHeadersPost(EntityRequest entityRequest, String endPoint) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 
         String body = String.format("{\"id\":%s}", app.getDocID());
 
         HashMap<String, String> mapHandle = new HashMap<>();
         mapHandle.put("address", endPoint);
 
-        return sendRequestHttpPost(mapHandle, returnHeaderParams(header), body);
+        return sendRequestHttpPost(mapHandle, returnHeaderParams(entityRequest), body);
 
     }
 

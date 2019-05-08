@@ -3,7 +3,7 @@ package model.entity;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.internal.LinkedTreeMap;
 
-public class EntityHeader {
+public class EntityRequest {
     @SerializedName("testCase")
     private String testCase;
 
@@ -12,6 +12,9 @@ public class EntityHeader {
 
     @SerializedName("head")
     protected LinkedTreeMap<String, String>[] head = new LinkedTreeMap[0];
+
+    @SerializedName("body")
+    protected LinkedTreeMap<String, String>[] body = new LinkedTreeMap[0];
 
     public String getTestCase() {
         return testCase;
@@ -23,5 +26,9 @@ public class EntityHeader {
 
     public LinkedTreeMap<String, String>[] getHead() {
         return head;
+    }
+
+    public LinkedTreeMap<String, String>[] getBody() {
+        return body;
     }
 }

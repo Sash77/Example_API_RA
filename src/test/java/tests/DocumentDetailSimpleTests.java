@@ -7,7 +7,7 @@ import appmanager.TestBase;
 import appmanager.TestListener;
 import dataprovider.DataProviderDocument;
 import io.qameta.allure.Description;
-import model.entity.EntityHeader;
+import model.entity.EntityRequest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -21,7 +21,7 @@ public class DocumentDetailSimpleTests extends TestBase {
 
     @Description("Document detail simple positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentDetailSimplePositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentDetailSimplePositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
@@ -30,7 +30,7 @@ public class DocumentDetailSimpleTests extends TestBase {
 
     @Description("Document detail simple negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentDetailSimpleNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentDetailSimpleNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
@@ -41,7 +41,7 @@ public class DocumentDetailSimpleTests extends TestBase {
 
 //    @Description("Document detail simple positive")
 //    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentDetailSimplePositive(EntityHeader dataProvider) {
+//    public void testDocumentDetailSimplePositive(EntityRequest dataProvider) {
 //
 //        step(String.format("Test case: %s", dataProvider.getTestCase()));
 //
@@ -59,7 +59,7 @@ public class DocumentDetailSimpleTests extends TestBase {
 //
 //    @Description("Document detail simple negative")
 //    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentDetailSimpleNegative(EntityHeader dataProvider) {
+//    public void testDocumentDetailSimpleNegative(EntityRequest dataProvider) {
 //
 //        step(String.format("Test case: %s", dataProvider.getTestCase()));
 //
