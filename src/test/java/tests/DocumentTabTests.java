@@ -20,7 +20,7 @@ public class DocumentTabTests extends TestBase {
 
     @Description("Document tab positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentTabHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
@@ -29,11 +29,27 @@ public class DocumentTabTests extends TestBase {
 
     @Description("Document tab negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentTabHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentTab), dataProvider.getCode());
+    }
+
+    @Description("Document tab well formed negative")
+    @Test(dataProvider = "validDocWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testDocumentTabWellFormedNegative(EntityRequest dataProvider) {
+
+        step(String.format("Test case: %s", dataProvider.getTestCase()));
+
+        given().
+                spec(app.getSpecificationRequest().getRequestRegular()).
+                when().
+                post(EndPoints.documentTab).
+                then().
+                assertThat().
+                statusCode(dataProvider.getCode());
+
     }
 
 //    @Description("Document tab positive")

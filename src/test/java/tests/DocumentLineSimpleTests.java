@@ -18,9 +18,9 @@ import static org.testng.Assert.assertEquals;
 @Listeners(TestListener.class)
 public class DocumentLineSimpleTests extends TestBase {
 
-        @Description("Document line simple positive")
+    @Description("Document line simple positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentLineSimplePositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentLineSimpleHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
 
             step(String.format("Test case: %s", dataProvider.getTestCase()));
@@ -30,12 +30,28 @@ public class DocumentLineSimpleTests extends TestBase {
 
     @Description("Document line simple negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentLineSimpleNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentLineSimpleHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentLineSimple), dataProvider.getCode());
+    }
+
+    @Description("Document line simple well formed negative")
+    @Test(dataProvider = "validDocWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testDocumentLineSimpleWellFormedNegative(EntityRequest dataProvider) {
+
+        step(String.format("Test case: %s", dataProvider.getTestCase()));
+
+        given().
+                spec(app.getSpecificationRequest().getRequestRegular()).
+                when().
+                post(EndPoints.documentLineSimple).
+                then().
+                assertThat().
+                statusCode(dataProvider.getCode());
+
     }
 
 //    @Description("Document line simple positive")

@@ -20,7 +20,7 @@ public class DocumentTableTests extends TestBase {
 
     @Description("Document table positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTablePositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentTableHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
@@ -29,11 +29,27 @@ public class DocumentTableTests extends TestBase {
 
     @Description("Document table negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTableNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentTableHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentTable), dataProvider.getCode());
+    }
+
+    @Description("Document table well formed negative")
+    @Test(dataProvider = "validDocWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testDocumentTableWellFormedNegative(EntityRequest dataProvider) {
+
+        step(String.format("Test case: %s", dataProvider.getTestCase()));
+
+        given().
+                spec(app.getSpecificationRequest().getRequestRegular()).
+                when().
+                post(EndPoints.documentTable).
+                then().
+                assertThat().
+                statusCode(dataProvider.getCode());
+
     }
 
 //    @Description("Document table positive")

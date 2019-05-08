@@ -18,9 +18,9 @@ import static org.testng.Assert.assertEquals;
 @Listeners(TestListener.class)
 public class DocumentDetailTests extends TestBase {
 
-        @Description("Document detail positive")
+    @Description("Document detail positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentDetailPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentDetailHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
             step(String.format("Test case: %s", dataProvider.getTestCase()));
             app.setCheck("Send request");
@@ -29,11 +29,27 @@ public class DocumentDetailTests extends TestBase {
 
     @Description("Document detail negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentDetailNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentDetailHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentDetail), dataProvider.getCode());
+    }
+
+    @Description("Document detail well formed negative")
+    @Test(dataProvider = "validDocWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testDocumentDetailWellFormedNegative(EntityRequest dataProvider) {
+
+        step(String.format("Test case: %s", dataProvider.getTestCase()));
+
+        given().
+                spec(app.getSpecificationRequest().getRequestRegular()).
+                when().
+                post(EndPoints.documentDetail).
+                then().
+                assertThat().
+                statusCode(dataProvider.getCode());
+
     }
 
 //    @Description("Document detail positive")

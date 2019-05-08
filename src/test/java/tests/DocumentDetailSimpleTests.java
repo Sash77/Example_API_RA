@@ -19,25 +19,39 @@ import static io.restassured.RestAssured.given;
 @Listeners(TestListener.class)
 public class DocumentDetailSimpleTests extends TestBase {
 
-    @Description("Document detail simple positive")
+    @Description("Document detail simple header positive")
     @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentDetailSimplePositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentDetailSimpleHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentDetailSimple), dataProvider.getCode());
     }
 
-    @Description("Document detail simple negative")
+    @Description("Document detail simple header negative")
     @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentDetailSimpleNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testDocumentDetailSimpleHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentDetailSimple), dataProvider.getCode());
     }
 
+    @Description("Document detail simple well formed negative")
+    @Test(dataProvider = "validDocWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testDocumentDetailSimpleWellFormedNegative(EntityRequest dataProvider) {
 
+        step(String.format("Test case: %s", dataProvider.getTestCase()));
+
+        given().
+                spec(app.getSpecificationRequest().getRequestRegular()).
+                when().
+                post(EndPoints.documentDetailSimple).
+                then().
+                assertThat().
+                statusCode(dataProvider.getCode());
+
+    }
 
 //    @Description("Document detail simple positive")
 //    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)

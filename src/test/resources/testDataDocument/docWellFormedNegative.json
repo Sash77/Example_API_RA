@@ -1,3 +1,42 @@
 [
-  {}
+  {
+    "testCase": "docWellFormed negative no {",
+    "code": 400,
+    "wellformed": "\"id\":\"%s\"}"
+  },
+  {
+    "testCase": "docWellFormed negative no }",
+    "code": 400,
+    "wellformed": "{\"id\":\"%s\""
+  },
+  {
+    "testCase": "docWellFormed negative ,",
+    "code": 400,
+    "wellformed": "{\"id\":\"%s\",}"
+  },
+  {
+    "testCase": "docWellFormed negative id out \"",
+    "code": 400,
+    "wellformed": "{id:\"%s\"}"
+  },
+  {
+    "testCase": "docWellFormed negative id = empty",
+    "code": 400,
+    "wellformed": "{\"id\":}"
+  },
+  {
+    "testCase": "docWellFormed negative Id big",
+    "code": 400,
+    "wellformed": "{\"Id\":\"%s\"}"
+  },
+  {
+    "testCase": "docWellFormed negative ; instead :",
+    "code": 400,
+    "wellformed": "{\"id\";\"%s\"}"
+  },
+  {
+    "testCase": "docWellFormed negative",
+    "code": 400,
+    "wellformed": "{\"%s\":\"id\"}"
+  }
 ]

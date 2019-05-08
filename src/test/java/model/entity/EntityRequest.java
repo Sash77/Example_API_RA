@@ -16,6 +16,9 @@ public class EntityRequest {
     @SerializedName("body")
     protected LinkedTreeMap<String, String>[] body = new LinkedTreeMap[0];
 
+    @SerializedName("wellformed")
+    protected String wellFormed;
+
     public String getTestCase() {
         return testCase;
     }
@@ -30,5 +33,9 @@ public class EntityRequest {
 
     public LinkedTreeMap<String, String>[] getBody() {
         return body;
+    }
+
+    public String getWellFormed() {
+        return wellFormed;
     }
 }
