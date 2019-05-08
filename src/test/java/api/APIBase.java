@@ -190,7 +190,15 @@ public abstract class APIBase {
         return Integer.parseInt(resultHandle[0]);
     }
 
-    public HashMap<String, String> returnHeaderParams(EntityRequest entityRequest) {
+    private Executor getExecutor() {
+        return Executor.newInstance();
+    }
+
+    protected void logTrace(String value) {
+        app.getLogger().trace(value);
+    }
+
+    protected HashMap<String, String> returnHeaderParams(EntityRequest entityRequest) {
 
         int qntItems = entityRequest.getHead().length;
         HashMap<String, String> params = new HashMap<>();
@@ -234,13 +242,4 @@ public abstract class APIBase {
 
         return body.toString();
     }
-
-    private Executor getExecutor() {
-        return Executor.newInstance();
-    }
-
-    protected void logTrace(String value) {
-        app.getLogger().trace(value);
-    }
-
 }

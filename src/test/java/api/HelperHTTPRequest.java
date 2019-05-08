@@ -1,10 +1,12 @@
 package api;
 
 import appmanager.ApplicationManager;
+import com.google.gson.internal.LinkedTreeMap;
 import model.entity.EntityRequest;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 public class HelperHTTPRequest extends APIBase {
 
@@ -14,7 +16,7 @@ public class HelperHTTPRequest extends APIBase {
 
     public int sendHeadersPost(EntityRequest entityRequest, String endPoint) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 
-        String body = String.format("{\"id\":%s}", app.getDocID());
+        String body = String.format("{\"id\":\"%s\"}", app.getDocID());
 
         HashMap<String, String> mapHandle = new HashMap<>();
         mapHandle.put("address", endPoint);
@@ -32,4 +34,19 @@ public class HelperHTTPRequest extends APIBase {
 //
 //    }
 
+    public String getBodyInHashMap(LinkedTreeMap<String, String>[] additionalBody) {
+
+        int qntItems = additionalBody.length;
+
+        HashMap<String, String> bodyMap = new HashMap<>();
+
+        if (qntItems!=0) {
+            for (int i = 0; i < qntItems; i++) {
+                for (Map.Entry<String, String> item : additionalBody[i].entrySet()) {
+                    bodyMap.put(item.getKey(), item.getValue());
+                }
+            }
+        }
+        return getBodyForRequest(bodyMap);
+    }
 }
