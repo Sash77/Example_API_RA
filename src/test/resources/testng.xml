@@ -8,7 +8,16 @@
 
     <test name="SupPortal REST API" thread-count="1"  parallel="false">
         <classes>
-            <!--<class name="tests.AuthenticationLogInTests"/>-->
+            <class name="tests.DocumentDetailSimpleTests"/>
+            <class name="tests.DocumentDetailTests"/>
+            <class name="tests.DocumentHeaderSimpleTests"/>
+            <class name="tests.DocumentHeaderTests"/>
+            <class name="tests.DocumentLineSimpleTests"/>
+            <class name="tests.DocumentLineTests"/>
+            <class name="tests.DocumentTableSimpleTests"/>
+            <class name="tests.DocumentTableTests"/>
+            <class name="tests.DocumentTabSimpleTests"/>
+            <class name="tests.DocumentTabTests"/>
         </classes>
     </test>
 </suite>

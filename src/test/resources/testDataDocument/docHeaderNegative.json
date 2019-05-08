@@ -12,5 +12,26 @@
     "contentValue":"application/json",
     "acceptKey":"accept",
     "acceptValue":"application/xml"
+  },
+  {"testCase": "docHeader negative content/accept xml",
+    "code":415,
+    "contentKey":"content-type",
+    "contentValue":"application/xml",
+    "acceptKey":"accept",
+    "acceptValue":"application/xml"
+  },
+  {"testCase": "docHeader negative content \" \"",
+  "code":415,
+  "contentKey":"content-type",
+  "contentValue":" ",
+  "acceptKey":"accept",
+  "acceptValue":"application/json"
+},
+  {"testCase": "docHeader negative accept \" \"",
+    "code":406,
+    "contentKey":"content-type",
+    "contentValue":"application/json",
+    "acceptKey":"accept",
+    "acceptValue":" "
   }
 ]

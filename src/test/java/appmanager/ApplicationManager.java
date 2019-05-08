@@ -30,6 +30,7 @@ public class ApplicationManager {
 
     private SpecificationRequest specificationRequest;
     private SpecificationResponse specificationResponse;
+    private HelperHTTPRequest helperHTTPRequest;
 
 
     public ApplicationManager() {
@@ -50,6 +51,7 @@ public class ApplicationManager {
         javaRunCommand = new JavaRunCommand();
         specificationRequest = new SpecificationRequest(this);
         specificationResponse = new SpecificationResponse(this);
+        helperHTTPRequest = new HelperHTTPRequest(this);
 
     }
 
@@ -75,6 +77,10 @@ public class ApplicationManager {
 
     public SpecificationResponse getSpecificationResponse() {
         return specificationResponse;
+    }
+
+    public HelperHTTPRequest getHelperHTTPRequest() {
+        return helperHTTPRequest;
     }
 
     public String getDocID() {
