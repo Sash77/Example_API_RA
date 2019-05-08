@@ -24,9 +24,8 @@ public class DocumentTabTests extends TestBase {
     public void testDocumentTabPositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentTab), dataProvider.getCode());
-
     }
 
     @Description("Document tab negative")
@@ -34,9 +33,8 @@ public class DocumentTabTests extends TestBase {
     public void testDocumentTabNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentTab), dataProvider.getCode());
-
     }
 
 //    @Description("Document tab positive")

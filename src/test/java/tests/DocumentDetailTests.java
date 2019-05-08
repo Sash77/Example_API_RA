@@ -23,9 +23,8 @@ public class DocumentDetailTests extends TestBase {
     public void testDocumentDetailPositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
             step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+            app.setCheck("Send request");
             assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentDetail), dataProvider.getCode());
-
     }
 
     @Description("Document detail negative")
@@ -33,9 +32,8 @@ public class DocumentDetailTests extends TestBase {
     public void testDocumentDetailNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentDetail), dataProvider.getCode());
-
     }
 
 //    @Description("Document detail positive")

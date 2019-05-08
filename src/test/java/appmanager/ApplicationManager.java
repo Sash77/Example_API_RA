@@ -32,6 +32,8 @@ public class ApplicationManager {
     private SpecificationResponse specificationResponse;
     private HelperHTTPRequest helperHTTPRequest;
 
+    String messageToLog;
+
 
     public ApplicationManager() {
         properties = new Properties();
@@ -52,6 +54,8 @@ public class ApplicationManager {
         specificationRequest = new SpecificationRequest(this);
         specificationResponse = new SpecificationResponse(this);
         helperHTTPRequest = new HelperHTTPRequest(this);
+
+        messageToLog = "";
 
     }
 
@@ -113,6 +117,14 @@ public class ApplicationManager {
 
     public Logger getLogger(){
         return ApplicationManager.logger;
+    }
+
+    public String getMessageToLog() {
+        return messageToLog;
+    }
+
+    public void setMessageToLog(String messageToLog) {
+        this.messageToLog = messageToLog;
     }
 
     public void logError(String value){

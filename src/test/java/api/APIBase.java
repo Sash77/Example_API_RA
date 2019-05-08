@@ -73,6 +73,8 @@ public abstract class APIBase {
 
     protected int sendRequestHttpPost(HashMap<String, String> mapHandle, HashMap<String, String> mapParams, String body) throws IOException, IllegalAccessException, InstantiationException, ClassNotFoundException {
 
+        app.setMessageToLog("");
+
         //[0] status code
         //[1] codeText
         //[2] body
@@ -129,12 +131,14 @@ public abstract class APIBase {
                                     }
         );
 
-//        String messageToLogShort = resultHandle[2].substring(0, Integer.parseInt(resultHandle[4]));
+        app.setMessageToLog(resultHandle[2].substring(0, Integer.parseInt(resultHandle[4])));
 
         return Integer.parseInt(resultHandle[0]);
     }
 
     protected int sendRequestHttpGet(HashMap<String, String> mapHandle, HashMap<String, String> mapParams, boolean dontExpectBody) throws IOException, IllegalAccessException, InstantiationException, ClassNotFoundException {
+
+        app.setMessageToLog("");
 
         //[0] status code
         //[1] codeText
@@ -181,7 +185,7 @@ public abstract class APIBase {
                                     }
         );
 
-//        String messageToLogShort = resultHandle[2].substring(0, Integer.parseInt(resultHandle[4]));
+        app.setMessageToLog(resultHandle[2].substring(0, Integer.parseInt(resultHandle[4])));
 
         return Integer.parseInt(resultHandle[0]);
     }

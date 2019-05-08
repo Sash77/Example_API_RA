@@ -24,9 +24,8 @@ public class DocumentLineTests extends TestBase {
     public void testDocumentLinePositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentLine), dataProvider.getCode());
-
     }
 
     @Description("Document line negative")
@@ -34,9 +33,8 @@ public class DocumentLineTests extends TestBase {
     public void testDocumentLineNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentLine), dataProvider.getCode());
-
     }
 
 //    @Description("Document line positive")

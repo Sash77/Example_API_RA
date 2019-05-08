@@ -24,9 +24,8 @@ public class DocumentHeaderTests extends TestBase {
     public void testDocumentHeaderPositive(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
             step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+            app.setCheck("Send request");
             assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentHeader), dataProvider.getCode());
-
     }
 
     @Description("Document header negative")
@@ -34,9 +33,8 @@ public class DocumentHeaderTests extends TestBase {
     public void testDocumentHeaderNegative(EntityHeader dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentHeader), dataProvider.getCode());
-
     }
 
 //    @Description("Document header positive")

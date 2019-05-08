@@ -25,10 +25,8 @@ public class DocumentLineSimpleTests extends TestBase {
 
 
             step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+            app.setCheck("Send request");
             assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentLineSimple), dataProvider.getCode());
-
-
     }
 
     @Description("Document line simple negative")
@@ -37,9 +35,8 @@ public class DocumentLineSimpleTests extends TestBase {
 
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
-
+        app.setCheck("Send request");
         assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentLineSimple), dataProvider.getCode());
-
     }
 
 //    @Description("Document line simple positive")

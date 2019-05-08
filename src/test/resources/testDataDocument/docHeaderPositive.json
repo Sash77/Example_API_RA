@@ -1,55 +1,95 @@
 [
   {
-    "testCase": "docDetail camelCase key positive",
+    "testCase": "docHeader positive",
     "code": 200,
-    "id":"144FA0",
+    "head": [
+      {
+        "content-type": "application/json",
+        "accept": "application/json"
+      }
+    ]
+  },
+  {
+    "testCase": "docHeader positive header is empty",
+    "code": 200,
+    "head": []
+  },
+  {
+    "testCase": "docHeader positive only content",
+    "code": 200,
+    "head": [
+      {
+        "content-type": "application/json"
+      }
+    ]
+  },
+  {
+    "testCase": "docHeader positive only accept",
+    "code": 200,
+    "head": [
+      {
+        "accept": "application/json"
+      }
+    ]
+  },
+  {
+    "testCase": "docHeader positive Content big",
+    "code": 200,
     "head": [
       {
         "Content-type": "application/json",
+        "accept": "application/json"
+      }
+    ]
+  },
+  {
+    "testCase": "docHeader positive Accept big",
+    "code": 200,
+    "head": [
+      {
+        "content-type": "application/json",
         "Accept": "application/json"
       }
     ]
   },
-
-
-  {"testCase": "docHeader positive",
-    "contentKey":"content-type",
-    "contentValue":"application/json",
-    "acceptKey":"accept",
-    "acceptValue":"application/json"
+  {
+    "testCase": "docHeader positive content Json big",
+    "code": 200,
+    "head": [
+      {
+        "content-type": "application/Json",
+        "accept": "application/json"
+      }
+    ]
   },
-  {"testCase": "docHeader positive header is empty"
+  {
+    "testCase": "docHeader positive accept Json big",
+    "code": 200,
+    "head": [
+      {
+        "content-type": "application/json",
+        "accept": "application/Json"
+      }
+    ]
   },
-  {"testCase": "docHeader positive only content",
-    "contentKey":"content-type",
-    "contentValue":"application/json"
+  {
+    "testCase": "docHeader positive content Application",
+    "code": 200,
+    "head": [
+      {
+        "content-type": "Application/json",
+        "accept": "application/json"
+      }
+    ]
   },
-  {"testCase": "docHeader positive only accept",
-    "acceptKey":"accept",
-    "acceptValue":"application/json"
-  },
-  {"testCase": "docHeader positive Content big",
-    "contentKey":"Content-type",
-    "contentValue":"application/json",
-    "acceptKey":"accept",
-    "acceptValue":"application/json"
-  },
-  {"testCase": "docHeader positive Accept big",
-    "contentKey":"content-type",
-    "contentValue":"application/json",
-    "acceptKey":"Accept",
-    "acceptValue":"application/json"
-  },
-  {"testCase": "docHeader positive content Json big",
-    "contentKey":"content-type",
-    "contentValue":"application/Json",
-    "acceptKey":"accept",
-    "acceptValue":"application/json"
-  },
-  {"testCase": "docHeader positive accept Json big",
-    "contentKey":"content-type",
-    "contentValue":"application/json",
-    "acceptKey":"accept",
-    "acceptValue":"application/Json"
+  {
+    "testCase": "docHeader positive accept Application",
+    "code": 200,
+    "head": [
+      {
+        "content-type": "application/json",
+        "accept": "Application/json"
+      }
+    ]
   }
 ]

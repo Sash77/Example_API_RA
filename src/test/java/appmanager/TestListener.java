@@ -19,10 +19,18 @@ public class TestListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
 
+        ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
+        Allure.addAttachment(app.getCheck(), app.getMessageToLog());
+        app.logError(app.getCheck());
+
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
+
+        ApplicationManager app = (ApplicationManager) result.getTestContext().getAttribute("app");
+        Allure.addAttachment(app.getCheck(), app.getMessageToLog());
+        app.logError(app.getCheck());
 
     }
 
