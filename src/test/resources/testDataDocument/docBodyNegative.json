@@ -1,257 +1,83 @@
-
 [
   {
-    "testCase": "docDetail xml/json negative",
-    "code": 415,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "application/xml",
-        "accept": "application/json"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail json/xml negative",
-    "code": 406,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/xml"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail xml/xml negative",
-    "code": 415,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "application/xml",
-        "accept": "application/xml"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetailonly accept negative",
-    "code": 415,
-    "id": "144FA0",
-    "head": [
-      {
-        "accept": "application/json"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail content empty negative",
-    "code": 400,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "",
-        "accept": "application/json"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail accept empty positive",
-    "code": 500,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": ""
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail wrong doc id negative",
+    "testCase": "docBody negative id doesn't exists",
     "code": 200,
-    "id": "qwerty144FA0",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail empty doc id negative",
-    "code": 200,
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
     "body": [
       {
-        "id": ""
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
+        "id":"144FA0144FA0"
       }
     ]
   },
   {
-    "testCase": "docDetail 0 doc id negative",
+    "testCase": "docBody negative id empty",
     "code": 200,
-    "id": 0,
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail 1 doc id negative",
-    "code": 200,
-    "id": 1,
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail null doc id negative",
-    "code": 200,
-    "id": null,
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail long doc id negative",
-    "code": 200,
-    "id": 9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999,
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail letters doc id negative",
-    "code": 200,
-    "id": "abrakadabra",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail symbols doc id negative",
-    "code": 200,
-    "id": "%*!@",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail minus doc id negative",
-    "code": 200,
-    "id": "-144FA0",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
-      }
-    ]
-  },
-  {
-    "testCase": "docDetail twice doc id negative",
-    "code": 200,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
     "body": [
       {
-        "id": "144FA0"
-      }
-    ],
-    "messages": [
-      {
-        "type": "ERROR"
+        "id":""
       }
     ]
   },
   {
-    "testCase": "docDetail name doc id negative",
+    "testCase": "docBody negative id 0",
     "code": 200,
-    "id": "144FA0",
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/json"
-      }
-    ],
     "body": [
       {
-        "name": "vasya"
+        "id":0
       }
-    ],
-    "messages": [
+    ]
+  },
+  {
+    "testCase": "docBody negative id 1",
+    "code": 200,
+    "body": [
       {
-        "type": "ERROR"
+        "id":1
+      }
+    ]
+  },
+  {
+    "testCase": "docBody negative id null",
+    "code": 200,
+    "body": [
+      {
+        "id":null
+      }
+    ]
+  },
+  {
+    "testCase": "docBody negative ",
+    "code": 200,
+    "body": [
+      {
+        "id":"144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0"
+      }
+    ]
+  },
+  {
+    "testCase": "docBody negative id %123rgt$@hjy66",
+    "code": 200,
+    "body": [
+      {
+        "id":"%123rgt$@hjy66"
+      }
+    ]
+  },
+  {
+    "testCase": "docBody negative id -144FA0",
+    "code": 200,
+    "body": [
+      {
+        "id":"-144FA0"
+      }
+    ]
+  },
+  {
+    "testCase": "docBody negative id + name",
+    "code": 200,
+    "body": [
+      {
+        "id":"144FA0",
+        "name":"vasya"
       }
     ]
   }
