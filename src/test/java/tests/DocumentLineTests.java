@@ -46,6 +46,7 @@ public class DocumentLineTests extends TestBase {
 
         given().
                 spec(app.getSpecificationRequest().getRequestRegular()).
+                body(app.getHelperHTTPRequest().getBodyInHashMap(dataProvider.getBody())).
                 when().
                 post(EndPoints.documentLine).
                 then().
