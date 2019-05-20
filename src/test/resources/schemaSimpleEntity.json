@@ -1,0 +1,103 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://kofax.com/simpleEntity",
+  "type": "object",
+  "title": "simpleEntity",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "ENTITY"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "messages": {
+      "$id": "#/properties/messages",
+      "type": "array",
+      "title": "The Messages Schema",
+      "items": {
+        "$id": "#/properties/messages/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "records": {
+      "$id": "#/properties/records",
+      "type": "array",
+      "title": "The Records Schema",
+      "items": {
+        "$id": "#/properties/records/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "actions": {
+      "$id": "#/properties/actions",
+      "type": "array",
+      "title": "The Actions Schema",
+      "items": {
+        "$id": "#/properties/actions/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "subDocuments": {
+      "$id": "#/properties/subDocuments",
+      "type": "array",
+      "title": "The Subdocuments Schema",
+      "items": {
+        "$id": "#/properties/subDocuments/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    }
+  }
+}

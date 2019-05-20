@@ -1,0 +1,1302 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://kofax.com/rawEntity",
+  "type": "object",
+  "title": "rawEntity",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "ENTITY"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "messages": {
+      "$id": "#/properties/messages",
+      "type": "array",
+      "title": "The Messages Schema",
+      "items": {
+        "$id": "#/properties/messages/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "records": {
+      "$id": "#/properties/records",
+      "type": "array",
+      "title": "The Records Schema",
+      "items": {
+        "$id": "#/properties/records/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "type",
+          "editable",
+          "url",
+          "note",
+          "creatorName",
+          "name",
+          "description",
+          "mimeType",
+          "sapMimeType",
+          "messages",
+          "attributes",
+          "tables"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/records/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/records/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "RECORD"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "editable": {
+            "$id": "#/properties/records/items/properties/editable",
+            "type": "boolean",
+            "title": "The Editable Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "url": {
+            "$id": "#/properties/records/items/properties/url",
+            "type": "string",
+            "title": "The Url Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "note": {
+            "$id": "#/properties/records/items/properties/note",
+            "type": "string",
+            "title": "The Note Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "creatorName": {
+            "$id": "#/properties/records/items/properties/creatorName",
+            "type": "string",
+            "title": "The Creatorname Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "$id": "#/properties/records/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "description": {
+            "$id": "#/properties/records/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "mimeType": {
+            "$id": "#/properties/records/items/properties/mimeType",
+            "type": "string",
+            "title": "The Mimetype Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "sapMimeType": {
+            "$id": "#/properties/records/items/properties/sapMimeType",
+            "type": "string",
+            "title": "The Sapmimetype Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "messages": {
+            "$id": "#/properties/records/items/properties/messages",
+            "type": "array",
+            "title": "The Messages Schema",
+            "items": {
+              "$id": "#/properties/records/items/properties/messages/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "string"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "attributes": {
+            "$id": "#/properties/records/items/properties/attributes",
+            "type": "array",
+            "title": "The Attributes Schema",
+            "items": {
+              "$id": "#/properties/records/items/properties/attributes/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "id",
+                "type",
+                "name",
+                "value",
+                "description",
+                "fieldLength",
+                "placeholder",
+                "editable",
+                "mandatory",
+                "decimalPlaces",
+                "searchAvailable",
+                "valueType",
+                "references",
+                "valueRange",
+                "iconCode",
+                "referenceType",
+                "possibleValues",
+                "multiSelection",
+                "displayValue"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "type": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "ATTRIBUTE"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "name": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "value": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/value",
+                  "type": "string",
+                  "title": "The Value Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "description": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/description",
+                  "type": "string",
+                  "title": "The Description Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "fieldLength": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/fieldLength",
+                  "type": "integer",
+                  "title": "The Fieldlength Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "placeholder": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/placeholder",
+                  "type": "string",
+                  "title": "The Placeholder Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "editable": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/editable",
+                  "type": "boolean",
+                  "title": "The Editable Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "mandatory": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/mandatory",
+                  "type": "boolean",
+                  "title": "The Mandatory Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "decimalPlaces": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/decimalPlaces",
+                  "type": "integer",
+                  "title": "The Decimalplaces Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "searchAvailable": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/searchAvailable",
+                  "type": "boolean",
+                  "title": "The Searchavailable Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "valueType": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/valueType",
+                  "type": "string",
+                  "title": "The Valuetype Schema",
+                  "default": "",
+                  "examples": [
+                    "DEFAULT"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "references": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/references",
+                  "type": "array",
+                  "title": "The References Schema",
+                  "items": {
+                    "$id": "#/properties/records/items/properties/attributes/items/properties/references/items",
+                    "type": "null",
+                    "title": "The Items Schema",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  }
+                },
+                "valueRange": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/valueRange",
+                  "type": "array",
+                  "title": "The Valuerange Schema",
+                  "items": {
+                    "$id": "#/properties/records/items/properties/attributes/items/properties/valueRange/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "low",
+                      "high",
+                      "operator",
+                      "include"
+                    ],
+                    "properties": {
+                      "low": {
+                        "$id": "#/properties/records/items/properties/attributes/items/properties/valueRange/items/properties/low",
+                        "type": "integer",
+                        "title": "The Low Schema",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "high": {
+                        "$id": "#/properties/records/items/properties/attributes/items/properties/valueRange/items/properties/high",
+                        "type": "integer",
+                        "title": "The High Schema",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "operator": {
+                        "$id": "#/properties/records/items/properties/attributes/items/properties/valueRange/items/properties/operator",
+                        "type": "string",
+                        "title": "The Operator Schema",
+                        "default": "",
+                        "examples": [
+                          "=="
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "include": {
+                        "$id": "#/properties/records/items/properties/attributes/items/properties/valueRange/items/properties/include",
+                        "type": "boolean",
+                        "title": "The Include Schema",
+                        "default": false,
+                        "examples": [
+                          true
+                        ]
+                      }
+                    }
+                  }
+                },
+                "iconCode": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/iconCode",
+                  "type": "string",
+                  "title": "The Iconcode Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "referenceType": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/referenceType",
+                  "type": "string",
+                  "title": "The Referencetype Schema",
+                  "default": "",
+                  "examples": [
+                    "NONE"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "possibleValues": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues",
+                  "type": "object",
+                  "title": "The Possiblevalues Schema",
+                  "required": [
+                    "valueMap"
+                  ],
+                  "properties": {
+                    "valueMap": {
+                      "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap",
+                      "type": "object",
+                      "title": "The Valuemap Schema",
+                      "required": [
+                        "additionalProp1",
+                        "additionalProp2",
+                        "additionalProp3"
+                      ],
+                      "properties": {
+                        "additionalProp1": {
+                          "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
+                          "type": "string",
+                          "title": "The Additionalprop1 Schema",
+                          "default": "",
+                          "examples": [
+                            "string"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "additionalProp2": {
+                          "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap/properties/additionalProp2",
+                          "type": "string",
+                          "title": "The Additionalprop2 Schema",
+                          "default": "",
+                          "examples": [
+                            "string"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "additionalProp3": {
+                          "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap/properties/additionalProp3",
+                          "type": "string",
+                          "title": "The Additionalprop3 Schema",
+                          "default": "",
+                          "examples": [
+                            "string"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    }
+                  }
+                },
+                "multiSelection": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/multiSelection",
+                  "type": "boolean",
+                  "title": "The Multiselection Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "displayValue": {
+                  "$id": "#/properties/records/items/properties/attributes/items/properties/displayValue",
+                  "type": "string",
+                  "title": "The Displayvalue Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "tables": {
+            "$id": "#/properties/records/items/properties/tables",
+            "type": "array",
+            "title": "The Tables Schema",
+            "items": {
+              "$id": "#/properties/records/items/properties/tables/items",
+              "type": "null",
+              "title": "The Items Schema",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          }
+        }
+      }
+    },
+    "actions": {
+      "$id": "#/properties/actions",
+      "type": "array",
+      "title": "The Actions Schema",
+      "items": {
+        "$id": "#/properties/actions/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "type",
+          "name",
+          "value",
+          "description",
+          "fieldLength",
+          "placeholder",
+          "editable",
+          "mandatory",
+          "decimalPlaces",
+          "searchAvailable",
+          "valueType",
+          "references",
+          "valueRange",
+          "iconCode",
+          "referenceType",
+          "possibleValues",
+          "multiSelection",
+          "displayValue"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/actions/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/actions/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "ATTRIBUTE"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "name": {
+            "$id": "#/properties/actions/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "value": {
+            "$id": "#/properties/actions/items/properties/value",
+            "type": "string",
+            "title": "The Value Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "description": {
+            "$id": "#/properties/actions/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "fieldLength": {
+            "$id": "#/properties/actions/items/properties/fieldLength",
+            "type": "integer",
+            "title": "The Fieldlength Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "placeholder": {
+            "$id": "#/properties/actions/items/properties/placeholder",
+            "type": "string",
+            "title": "The Placeholder Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "editable": {
+            "$id": "#/properties/actions/items/properties/editable",
+            "type": "boolean",
+            "title": "The Editable Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "mandatory": {
+            "$id": "#/properties/actions/items/properties/mandatory",
+            "type": "boolean",
+            "title": "The Mandatory Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "decimalPlaces": {
+            "$id": "#/properties/actions/items/properties/decimalPlaces",
+            "type": "integer",
+            "title": "The Decimalplaces Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "searchAvailable": {
+            "$id": "#/properties/actions/items/properties/searchAvailable",
+            "type": "boolean",
+            "title": "The Searchavailable Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "valueType": {
+            "$id": "#/properties/actions/items/properties/valueType",
+            "type": "string",
+            "title": "The Valuetype Schema",
+            "default": "",
+            "examples": [
+              "DEFAULT"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "references": {
+            "$id": "#/properties/actions/items/properties/references",
+            "type": "array",
+            "title": "The References Schema",
+            "items": {
+              "$id": "#/properties/actions/items/properties/references/items",
+              "type": "null",
+              "title": "The Items Schema",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          },
+          "valueRange": {
+            "$id": "#/properties/actions/items/properties/valueRange",
+            "type": "array",
+            "title": "The Valuerange Schema",
+            "items": {
+              "$id": "#/properties/actions/items/properties/valueRange/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "low",
+                "high",
+                "operator",
+                "include"
+              ],
+              "properties": {
+                "low": {
+                  "$id": "#/properties/actions/items/properties/valueRange/items/properties/low",
+                  "type": "integer",
+                  "title": "The Low Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "high": {
+                  "$id": "#/properties/actions/items/properties/valueRange/items/properties/high",
+                  "type": "integer",
+                  "title": "The High Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "operator": {
+                  "$id": "#/properties/actions/items/properties/valueRange/items/properties/operator",
+                  "type": "string",
+                  "title": "The Operator Schema",
+                  "default": "",
+                  "examples": [
+                    "=="
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "include": {
+                  "$id": "#/properties/actions/items/properties/valueRange/items/properties/include",
+                  "type": "boolean",
+                  "title": "The Include Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                }
+              }
+            }
+          },
+          "iconCode": {
+            "$id": "#/properties/actions/items/properties/iconCode",
+            "type": "string",
+            "title": "The Iconcode Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "referenceType": {
+            "$id": "#/properties/actions/items/properties/referenceType",
+            "type": "string",
+            "title": "The Referencetype Schema",
+            "default": "",
+            "examples": [
+              "NONE"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "possibleValues": {
+            "$id": "#/properties/actions/items/properties/possibleValues",
+            "type": "object",
+            "title": "The Possiblevalues Schema",
+            "required": [
+              "valueMap"
+            ],
+            "properties": {
+              "valueMap": {
+                "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap",
+                "type": "object",
+                "title": "The Valuemap Schema",
+                "required": [
+                  "additionalProp1",
+                  "additionalProp2",
+                  "additionalProp3"
+                ],
+                "properties": {
+                  "additionalProp1": {
+                    "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
+                    "type": "string",
+                    "title": "The Additionalprop1 Schema",
+                    "default": "",
+                    "examples": [
+                      "string"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "additionalProp2": {
+                    "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp2",
+                    "type": "string",
+                    "title": "The Additionalprop2 Schema",
+                    "default": "",
+                    "examples": [
+                      "string"
+                    ],
+                    "pattern": "^(.*)$"
+                  },
+                  "additionalProp3": {
+                    "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp3",
+                    "type": "string",
+                    "title": "The Additionalprop3 Schema",
+                    "default": "",
+                    "examples": [
+                      "string"
+                    ],
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
+            }
+          },
+          "multiSelection": {
+            "$id": "#/properties/actions/items/properties/multiSelection",
+            "type": "boolean",
+            "title": "The Multiselection Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "displayValue": {
+            "$id": "#/properties/actions/items/properties/displayValue",
+            "type": "string",
+            "title": "The Displayvalue Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "subDocuments": {
+      "$id": "#/properties/subDocuments",
+      "type": "array",
+      "title": "The Subdocuments Schema",
+      "items": {
+        "$id": "#/properties/subDocuments/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "type",
+          "documentType",
+          "status",
+          "locked",
+          "documentNumber",
+          "messages",
+          "actions",
+          "entities"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/subDocuments/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/subDocuments/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "SCHEMA"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "documentType": {
+            "$id": "#/properties/subDocuments/items/properties/documentType",
+            "type": "string",
+            "title": "The Documenttype Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "status": {
+            "$id": "#/properties/subDocuments/items/properties/status",
+            "type": "string",
+            "title": "The Status Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "locked": {
+            "$id": "#/properties/subDocuments/items/properties/locked",
+            "type": "boolean",
+            "title": "The Locked Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "documentNumber": {
+            "$id": "#/properties/subDocuments/items/properties/documentNumber",
+            "type": "string",
+            "title": "The Documentnumber Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "messages": {
+            "$id": "#/properties/subDocuments/items/properties/messages",
+            "type": "array",
+            "title": "The Messages Schema",
+            "items": {
+              "$id": "#/properties/subDocuments/items/properties/messages/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "id",
+                "type",
+                "sapClass",
+                "number",
+                "text"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/subDocuments/items/properties/messages/items/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "type": {
+                  "$id": "#/properties/subDocuments/items/properties/messages/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "SUCCESS"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "sapClass": {
+                  "$id": "#/properties/subDocuments/items/properties/messages/items/properties/sapClass",
+                  "type": "string",
+                  "title": "The Sapclass Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "number": {
+                  "$id": "#/properties/subDocuments/items/properties/messages/items/properties/number",
+                  "type": "string",
+                  "title": "The Number Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "text": {
+                  "$id": "#/properties/subDocuments/items/properties/messages/items/properties/text",
+                  "type": "string",
+                  "title": "The Text Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "actions": {
+            "$id": "#/properties/subDocuments/items/properties/actions",
+            "type": "array",
+            "title": "The Actions Schema",
+            "items": {
+              "$id": "#/properties/subDocuments/items/properties/actions/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "id",
+                "type",
+                "name",
+                "value",
+                "description",
+                "fieldLength",
+                "placeholder",
+                "editable",
+                "mandatory",
+                "decimalPlaces",
+                "searchAvailable",
+                "valueType",
+                "references",
+                "valueRange",
+                "iconCode",
+                "referenceType",
+                "possibleValues",
+                "multiSelection",
+                "displayValue"
+              ],
+              "properties": {
+                "id": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "type": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "ATTRIBUTE"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "name": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "value": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/value",
+                  "type": "string",
+                  "title": "The Value Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "description": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/description",
+                  "type": "string",
+                  "title": "The Description Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "fieldLength": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/fieldLength",
+                  "type": "integer",
+                  "title": "The Fieldlength Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "placeholder": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/placeholder",
+                  "type": "string",
+                  "title": "The Placeholder Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "editable": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/editable",
+                  "type": "boolean",
+                  "title": "The Editable Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "mandatory": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/mandatory",
+                  "type": "boolean",
+                  "title": "The Mandatory Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "decimalPlaces": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/decimalPlaces",
+                  "type": "integer",
+                  "title": "The Decimalplaces Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "searchAvailable": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/searchAvailable",
+                  "type": "boolean",
+                  "title": "The Searchavailable Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "valueType": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueType",
+                  "type": "string",
+                  "title": "The Valuetype Schema",
+                  "default": "",
+                  "examples": [
+                    "DEFAULT"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "references": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/references",
+                  "type": "array",
+                  "title": "The References Schema",
+                  "items": {
+                    "$id": "#/properties/subDocuments/items/properties/actions/items/properties/references/items",
+                    "type": "null",
+                    "title": "The Items Schema",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  }
+                },
+                "valueRange": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueRange",
+                  "type": "array",
+                  "title": "The Valuerange Schema",
+                  "items": {
+                    "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueRange/items",
+                    "type": "object",
+                    "title": "The Items Schema",
+                    "required": [
+                      "low",
+                      "high",
+                      "operator",
+                      "include"
+                    ],
+                    "properties": {
+                      "low": {
+                        "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueRange/items/properties/low",
+                        "type": "integer",
+                        "title": "The Low Schema",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "high": {
+                        "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueRange/items/properties/high",
+                        "type": "integer",
+                        "title": "The High Schema",
+                        "default": 0,
+                        "examples": [
+                          0
+                        ]
+                      },
+                      "operator": {
+                        "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueRange/items/properties/operator",
+                        "type": "string",
+                        "title": "The Operator Schema",
+                        "default": "",
+                        "examples": [
+                          "=="
+                        ],
+                        "pattern": "^(.*)$"
+                      },
+                      "include": {
+                        "$id": "#/properties/subDocuments/items/properties/actions/items/properties/valueRange/items/properties/include",
+                        "type": "boolean",
+                        "title": "The Include Schema",
+                        "default": false,
+                        "examples": [
+                          true
+                        ]
+                      }
+                    }
+                  }
+                },
+                "iconCode": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/iconCode",
+                  "type": "string",
+                  "title": "The Iconcode Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "referenceType": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/referenceType",
+                  "type": "string",
+                  "title": "The Referencetype Schema",
+                  "default": "",
+                  "examples": [
+                    "NONE"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "possibleValues": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues",
+                  "type": "object",
+                  "title": "The Possiblevalues Schema",
+                  "required": [
+                    "valueMap"
+                  ],
+                  "properties": {
+                    "valueMap": {
+                      "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues/properties/valueMap",
+                      "type": "object",
+                      "title": "The Valuemap Schema",
+                      "required": [
+                        "additionalProp1",
+                        "additionalProp2",
+                        "additionalProp3"
+                      ],
+                      "properties": {
+                        "additionalProp1": {
+                          "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
+                          "type": "string",
+                          "title": "The Additionalprop1 Schema",
+                          "default": "",
+                          "examples": [
+                            "string"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "additionalProp2": {
+                          "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp2",
+                          "type": "string",
+                          "title": "The Additionalprop2 Schema",
+                          "default": "",
+                          "examples": [
+                            "string"
+                          ],
+                          "pattern": "^(.*)$"
+                        },
+                        "additionalProp3": {
+                          "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp3",
+                          "type": "string",
+                          "title": "The Additionalprop3 Schema",
+                          "default": "",
+                          "examples": [
+                            "string"
+                          ],
+                          "pattern": "^(.*)$"
+                        }
+                      }
+                    }
+                  }
+                },
+                "multiSelection": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/multiSelection",
+                  "type": "boolean",
+                  "title": "The Multiselection Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "displayValue": {
+                  "$id": "#/properties/subDocuments/items/properties/actions/items/properties/displayValue",
+                  "type": "string",
+                  "title": "The Displayvalue Schema",
+                  "default": "",
+                  "examples": [
+                    "string"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "entities": {
+            "$id": "#/properties/subDocuments/items/properties/entities",
+            "type": "array",
+            "title": "The Entities Schema",
+            "items": {
+              "$id": "#/properties/subDocuments/items/properties/entities/items",
+              "type": "null",
+              "title": "The Items Schema",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

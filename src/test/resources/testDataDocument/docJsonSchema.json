@@ -1,0 +1,93 @@
+[
+  {
+    "testCase": "docJsonSchema positive doc id",
+    "code": 200,
+    "body": [
+      {
+        "id":"144FA0"
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id doesn't exists",
+    "code": 200,
+    "body": [
+      {
+        "id":"144FA0144FA0"
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id empty",
+    "code": 200,
+    "body": [
+      {
+        "id":""
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id 0",
+    "code": 200,
+    "body": [
+      {
+        "id":0
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id 1",
+    "code": 200,
+    "body": [
+      {
+        "id":1
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id null",
+    "code": 200,
+    "body": [
+      {
+        "id":null
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative ",
+    "code": 200,
+    "body": [
+      {
+        "id":"144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0144FA0"
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id %123rgt$@hjy66",
+    "code": 200,
+    "body": [
+      {
+        "id":"%123rgt$@hjy66"
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id -144FA0",
+    "code": 200,
+    "body": [
+      {
+        "id":"-144FA0"
+      }
+    ]
+  },
+  {
+    "testCase": "docJsonSchema negative id + name",
+    "code": 200,
+    "body": [
+      {
+        "id":"144FA0",
+        "name":"vasya"
+      }
+    ]
+  }
+]

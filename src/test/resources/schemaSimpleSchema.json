@@ -1,0 +1,171 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://kofax.com/simpleSchema",
+  "type": "object",
+  "title": "simpleSchema",
+  "required": [
+    "id",
+    "type"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "SCHEMA"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "documentType": {
+      "$id": "#/properties/documentType",
+      "type": "string",
+      "title": "The Documenttype Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "status": {
+      "$id": "#/properties/status",
+      "type": "string",
+      "title": "The Status Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "locked": {
+      "$id": "#/properties/locked",
+      "type": "boolean",
+      "title": "The Locked Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "documentNumber": {
+      "$id": "#/properties/documentNumber",
+      "type": "string",
+      "title": "The Documentnumber Schema",
+      "default": "",
+      "examples": [
+        "string"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "messages": {
+      "$id": "#/properties/messages",
+      "type": "array",
+      "title": "The Messages Schema",
+      "items": {
+        "$id": "#/properties/messages/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "id",
+          "type",
+          "sapClass",
+          "number",
+          "text"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/properties/messages/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/messages/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "SUCCESS"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "sapClass": {
+            "$id": "#/properties/messages/items/properties/sapClass",
+            "type": "string",
+            "title": "The Sapclass Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "number": {
+            "$id": "#/properties/messages/items/properties/number",
+            "type": "string",
+            "title": "The Number Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "text": {
+            "$id": "#/properties/messages/items/properties/text",
+            "type": "string",
+            "title": "The Text Schema",
+            "default": "",
+            "examples": [
+              "string"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    },
+    "actions": {
+      "$id": "#/properties/actions",
+      "type": "array",
+      "title": "The Actions Schema",
+      "items": {
+        "$id": "#/properties/actions/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    },
+    "entities": {
+      "$id": "#/properties/entities",
+      "type": "array",
+      "title": "The Entities Schema",
+      "items": {
+        "$id": "#/properties/entities/items",
+        "type": "string",
+        "title": "The Items Schema",
+        "default": "",
+        "examples": [
+          "string"
+        ],
+        "pattern": "^(.*)$"
+      }
+    }
+  }
+}
