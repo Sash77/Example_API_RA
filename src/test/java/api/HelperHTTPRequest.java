@@ -3,10 +3,14 @@ package api;
 import appmanager.ApplicationManager;
 import com.google.gson.internal.LinkedTreeMap;
 import model.entity.EntityRequest;
+import model.enums.SchemaType;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class HelperHTTPRequest extends APIBase {
 
@@ -49,4 +53,11 @@ public class HelperHTTPRequest extends APIBase {
         }
         return getBodyForRequest(bodyMap);
     }
+
+    public List<String> getSchemaTypeList(){
+        return  Arrays.asList(SchemaType.values()).stream().//pass array in stream
+                map(l->new String(l.name())).//for each array's item create string and put there name of enum
+                collect(Collectors.toList());//create list of strings with names of enums data
+    }
+
 }

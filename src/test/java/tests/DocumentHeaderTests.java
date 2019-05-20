@@ -64,10 +64,6 @@ public class DocumentHeaderTests extends TestBase {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
 
-        List<String> schemaTypes = Arrays.asList(SchemaType.values()).stream().//pass array in stream
-                map(l->new String(l.name())).//for each array's item create string and put there name of enum
-                collect(Collectors.toList());//create list of strings with names of enums data
-
         given().
                 spec(app.getSpecificationRequest().getRequestRegular()).
                 body(app.getHelperHTTPRequest().getBodyInHashMap(dataProvider.getBody())).
@@ -81,7 +77,7 @@ public class DocumentHeaderTests extends TestBase {
                 and().
                 body("id", equalTo(String.format("%s", app.getDocID()))).
                 and().
-                body("type", is(in(schemaTypes))).
+                body("type", is(in(app.getHelperHTTPRequest().getSchemaTypeList()))).
                 and().
                 body("documentType", not(emptyOrNullString()));
 
