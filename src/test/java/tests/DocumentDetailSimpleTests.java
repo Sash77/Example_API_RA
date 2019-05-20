@@ -107,38 +107,4 @@ public class DocumentDetailSimpleTests extends TestBase {
 
     }
 
-//    @Description("Document detail simple positive")
-//    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentDetailSimplePositive(EntityRequest dataProvider) {
-//
-//        step(String.format("Test case: %s", dataProvider.getTestCase()));
-//
-//        given().
-//                spec(app.getSpecificationRequest().getRequestForHeader(dataProvider)).
-//                when().
-//                post(EndPoints.documentDetailSimple).
-//                then().
-//                assertThat().
-//                spec(app.getSpecificationResponse().getResponseRegular());
-////                and().
-////                body("messages",not(hasEntry("type","ERROR"))); body("messages",emptyArray())
-//
-//    }
-//
-//    @Description("Document detail simple negative")
-//    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-//    public void testDocumentDetailSimpleNegative(EntityRequest dataProvider) {
-//
-//        step(String.format("Test case: %s", dataProvider.getTestCase()));
-//
-//        given().
-//                spec(app.getSpecificationRequest().getRequestForHeader(dataProvider)).
-//                when().
-//                post(EndPoints.documentDetailSimple).
-//                then().
-//                assertThat().
-//                statusCode(dataProvider.getCode());
-//
-//    }
-
 }
