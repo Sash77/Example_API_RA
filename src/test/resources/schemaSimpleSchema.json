@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://kofax.com/simpleSchema",
   "type": "object",
-  "title": "simpleSchema",
+  "title": "The Root Schema",
   "required": [
     "id",
     "type"
@@ -79,7 +79,6 @@
         "required": [
           "id",
           "type",
-          "sapClass",
           "number",
           "text"
         ],

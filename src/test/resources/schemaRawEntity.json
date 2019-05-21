@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://kofax.com/rawEntity",
   "type": "object",
-  "title": "rawEntity",
+  "title": "The Root Schema",
   "required": [
     "id",
     "type"
@@ -65,17 +65,7 @@
         "required": [
           "id",
           "type",
-          "editable",
-          "url",
-          "note",
-          "creatorName",
-          "name",
-          "description",
-          "mimeType",
-          "sapMimeType",
-          "messages",
-          "attributes",
-          "tables"
+          "editable"
         ],
         "properties": {
           "id": {
@@ -203,23 +193,7 @@
               "required": [
                 "id",
                 "type",
-                "name",
-                "value",
-                "description",
-                "fieldLength",
-                "placeholder",
-                "editable",
-                "mandatory",
-                "decimalPlaces",
-                "searchAvailable",
-                "valueType",
-                "references",
-                "valueRange",
-                "iconCode",
-                "referenceType",
-                "possibleValues",
-                "multiSelection",
-                "displayValue"
+                "name"
               ],
               "properties": {
                 "id": {
@@ -360,10 +334,7 @@
                     "type": "object",
                     "title": "The Items Schema",
                     "required": [
-                      "low",
-                      "high",
-                      "operator",
-                      "include"
+                      "low"
                     ],
                     "properties": {
                       "low": {
@@ -438,11 +409,6 @@
                       "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap",
                       "type": "object",
                       "title": "The Valuemap Schema",
-                      "required": [
-                        "additionalProp1",
-                        "additionalProp2",
-                        "additionalProp3"
-                      ],
                       "properties": {
                         "additionalProp1": {
                           "$id": "#/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
@@ -528,23 +494,7 @@
         "required": [
           "id",
           "type",
-          "name",
-          "value",
-          "description",
-          "fieldLength",
-          "placeholder",
-          "editable",
-          "mandatory",
-          "decimalPlaces",
-          "searchAvailable",
-          "valueType",
-          "references",
-          "valueRange",
-          "iconCode",
-          "referenceType",
-          "possibleValues",
-          "multiSelection",
-          "displayValue"
+          "name"
         ],
         "properties": {
           "id": {
@@ -685,10 +635,7 @@
               "type": "object",
               "title": "The Items Schema",
               "required": [
-                "low",
-                "high",
-                "operator",
-                "include"
+                "low"
               ],
               "properties": {
                 "low": {
@@ -763,11 +710,6 @@
                 "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap",
                 "type": "object",
                 "title": "The Valuemap Schema",
-                "required": [
-                  "additionalProp1",
-                  "additionalProp2",
-                  "additionalProp3"
-                ],
                 "properties": {
                   "additionalProp1": {
                     "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
@@ -836,13 +778,7 @@
         "required": [
           "id",
           "type",
-          "documentType",
-          "status",
-          "locked",
-          "documentNumber",
-          "messages",
-          "actions",
-          "entities"
+          "documentType"
         ],
         "properties": {
           "id": {
@@ -915,7 +851,6 @@
               "required": [
                 "id",
                 "type",
-                "sapClass",
                 "number",
                 "text"
               ],
@@ -984,23 +919,7 @@
               "required": [
                 "id",
                 "type",
-                "name",
-                "value",
-                "description",
-                "fieldLength",
-                "placeholder",
-                "editable",
-                "mandatory",
-                "decimalPlaces",
-                "searchAvailable",
-                "valueType",
-                "references",
-                "valueRange",
-                "iconCode",
-                "referenceType",
-                "possibleValues",
-                "multiSelection",
-                "displayValue"
+                "name"
               ],
               "properties": {
                 "id": {
@@ -1141,10 +1060,7 @@
                     "type": "object",
                     "title": "The Items Schema",
                     "required": [
-                      "low",
-                      "high",
-                      "operator",
-                      "include"
+                      "low"
                     ],
                     "properties": {
                       "low": {
@@ -1219,11 +1135,6 @@
                       "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues/properties/valueMap",
                       "type": "object",
                       "title": "The Valuemap Schema",
-                      "required": [
-                        "additionalProp1",
-                        "additionalProp2",
-                        "additionalProp3"
-                      ],
                       "properties": {
                         "additionalProp1": {
                           "$id": "#/properties/subDocuments/items/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",

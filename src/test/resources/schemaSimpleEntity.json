@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://kofax.com/simpleEntity",
   "type": "object",
-  "title": "simpleEntity",
+  "title": "The Root Schema",
   "required": [
     "id",
     "type"

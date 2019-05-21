@@ -3,7 +3,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "http://kofax.com/rawSchema",
   "type": "object",
-  "title": "rawSchema",
+  "title": "The Root Schema",
   "required": [
     "id",
     "type",
@@ -80,7 +80,6 @@
         "required": [
           "id",
           "type",
-          "sapClass",
           "number",
           "text"
         ],
@@ -149,23 +148,7 @@
         "required": [
           "id",
           "type",
-          "name",
-          "value",
-          "description",
-          "fieldLength",
-          "placeholder",
-          "editable",
-          "mandatory",
-          "decimalPlaces",
-          "searchAvailable",
-          "valueType",
-          "references",
-          "valueRange",
-          "iconCode",
-          "referenceType",
-          "possibleValues",
-          "multiSelection",
-          "displayValue"
+          "name"
         ],
         "properties": {
           "id": {
@@ -306,10 +289,7 @@
               "type": "object",
               "title": "The Items Schema",
               "required": [
-                "low",
-                "high",
-                "operator",
-                "include"
+                "low"
               ],
               "properties": {
                 "low": {
@@ -384,11 +364,6 @@
                 "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap",
                 "type": "object",
                 "title": "The Valuemap Schema",
-                "required": [
-                  "additionalProp1",
-                  "additionalProp2",
-                  "additionalProp3"
-                ],
                 "properties": {
                   "additionalProp1": {
                     "$id": "#/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
@@ -456,12 +431,7 @@
         "title": "The Items Schema",
         "required": [
           "id",
-          "type",
-          "description",
-          "messages",
-          "records",
-          "actions",
-          "subDocuments"
+          "type"
         ],
         "properties": {
           "id": {
@@ -520,17 +490,7 @@
               "required": [
                 "id",
                 "type",
-                "editable",
-                "url",
-                "note",
-                "creatorName",
-                "name",
-                "description",
-                "mimeType",
-                "sapMimeType",
-                "messages",
-                "attributes",
-                "tables"
+                "editable"
               ],
               "properties": {
                 "id": {
@@ -658,23 +618,7 @@
                     "required": [
                       "id",
                       "type",
-                      "name",
-                      "value",
-                      "description",
-                      "fieldLength",
-                      "placeholder",
-                      "editable",
-                      "mandatory",
-                      "decimalPlaces",
-                      "searchAvailable",
-                      "valueType",
-                      "references",
-                      "valueRange",
-                      "iconCode",
-                      "referenceType",
-                      "possibleValues",
-                      "multiSelection",
-                      "displayValue"
+                      "name"
                     ],
                     "properties": {
                       "id": {
@@ -815,10 +759,7 @@
                           "type": "object",
                           "title": "The Items Schema",
                           "required": [
-                            "low",
-                            "high",
-                            "operator",
-                            "include"
+                            "low"
                           ],
                           "properties": {
                             "low": {
@@ -893,11 +834,6 @@
                             "$id": "#/properties/entities/items/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap",
                             "type": "object",
                             "title": "The Valuemap Schema",
-                            "required": [
-                              "additionalProp1",
-                              "additionalProp2",
-                              "additionalProp3"
-                            ],
                             "properties": {
                               "additionalProp1": {
                                 "$id": "#/properties/entities/items/properties/records/items/properties/attributes/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
@@ -983,23 +919,7 @@
               "required": [
                 "id",
                 "type",
-                "name",
-                "value",
-                "description",
-                "fieldLength",
-                "placeholder",
-                "editable",
-                "mandatory",
-                "decimalPlaces",
-                "searchAvailable",
-                "valueType",
-                "references",
-                "valueRange",
-                "iconCode",
-                "referenceType",
-                "possibleValues",
-                "multiSelection",
-                "displayValue"
+                "name"
               ],
               "properties": {
                 "id": {
@@ -1140,10 +1060,7 @@
                     "type": "object",
                     "title": "The Items Schema",
                     "required": [
-                      "low",
-                      "high",
-                      "operator",
-                      "include"
+                      "low"
                     ],
                     "properties": {
                       "low": {
@@ -1218,11 +1135,6 @@
                       "$id": "#/properties/entities/items/properties/actions/items/properties/possibleValues/properties/valueMap",
                       "type": "object",
                       "title": "The Valuemap Schema",
-                      "required": [
-                        "additionalProp1",
-                        "additionalProp2",
-                        "additionalProp3"
-                      ],
                       "properties": {
                         "additionalProp1": {
                           "$id": "#/properties/entities/items/properties/actions/items/properties/possibleValues/properties/valueMap/properties/additionalProp1",
