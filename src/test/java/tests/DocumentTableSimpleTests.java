@@ -62,6 +62,7 @@ public class DocumentTableSimpleTests extends TestBase {
 
         given().
                 spec(app.getSpecificationRequest().getRequestRegular()).
+                body(String.format(dataProvider.getWellFormed(), app.getDocID())).
                 when().
                 post(EndPoints.documentTableSimple).
                 then().
