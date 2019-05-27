@@ -114,4 +114,13 @@ public class DocumentTableTests extends TestBase {
 
     }
 
+    @Description("Document table null test")
+    @Test(dataProvider = "validNullDoc", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testTableNullInBody(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+
+        step(String.format("Test case: %s", dataProvider.getTestCase()));
+        app.setCheck("Send request");
+        assertEquals(app.getHelperHTTPRequest().sendNullInBodyPost(dataProvider, EndPoints.documentDetail), dataProvider.getCode());
+    }
+
 }

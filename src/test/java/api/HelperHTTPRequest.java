@@ -29,6 +29,15 @@ public class HelperHTTPRequest extends APIBase {
 
     }
 
+    public int sendNullInBodyPost(EntityRequest entityRequest, String endPoint) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException {
+
+        HashMap<String, String> mapHandle = new HashMap<>();
+        mapHandle.put("address", endPoint);
+
+        return sendRequestHttpPost(mapHandle, returnHeaderParams(entityRequest), getBodyInHashMap(entityRequest.getBody()));
+
+    }
+
 //    public int worklistTreeGetOperation(HashMap<String, String> params, String body, String endPoint) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 //        HashMap<String, String> mapHandle = new HashMap<>();
 //        mapHandle.put("address",endPoint);

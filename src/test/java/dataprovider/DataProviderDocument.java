@@ -117,4 +117,21 @@ public class DataProviderDocument {
         }
     }
 
+    @DataProvider
+    public Iterator<Object[]> validNullDoc() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/docNull.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
 }

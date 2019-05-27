@@ -1,0 +1,20 @@
+[
+  {
+    "testCase": "docBody null",
+    "code": 400,
+    "body": [
+      {
+        "id":null
+      }
+    ]
+  },
+  {
+    "testCase": "docBody null in array",
+    "code": 400,
+    "body": [
+      {
+        "id":["144FA0","B52157","30C1AF07C3D",null]
+      }
+    ]
+  }
+]

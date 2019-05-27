@@ -36,15 +36,6 @@
     ]
   },
   {
-    "testCase": "docBody negative id null",
-    "code": 200,
-    "body": [
-      {
-        "id":null
-      }
-    ]
-  },
-  {
     "testCase": "docBody negative ",
     "code": 200,
     "body": [
