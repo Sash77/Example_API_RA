@@ -31,7 +31,7 @@
   },
   {
     "testCase": "docWellFormed negative Id big",
-    "code": 500,
+    "code": 400,
     "wellformed": "{\"Id\":\"%s\"}"
   },
   {
@@ -41,7 +41,7 @@
   },
   {
     "testCase": "docWellFormed negative vice versa",
-    "code": 500,
+    "code": 400,
     "wellformed": "{\"%s\":\"id\"}"
   }
 ]

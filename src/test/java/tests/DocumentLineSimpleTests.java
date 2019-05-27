@@ -21,7 +21,7 @@ import static org.testng.Assert.assertEquals;
 public class DocumentLineSimpleTests extends TestBase {
 
     @Description("Document line simple positive")
-    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    @Test(dataProvider = "validHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
     public void testDocumentLineSimpleHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
 
@@ -31,7 +31,7 @@ public class DocumentLineSimpleTests extends TestBase {
     }
 
     @Description("Document line simple negative")
-    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    @Test(dataProvider = "validHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
     public void testDocumentLineSimpleHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
 

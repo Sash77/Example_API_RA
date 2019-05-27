@@ -21,7 +21,7 @@ import static org.testng.Assert.assertEquals;
 public class DocumentDetailTests extends TestBase {
 
     @Description("Document detail positive")
-    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    @Test(dataProvider = "validHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
     public void testDocumentDetailHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
@@ -30,7 +30,7 @@ public class DocumentDetailTests extends TestBase {
     }
 
     @Description("Document detail negative")
-    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    @Test(dataProvider = "validHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
     public void testDocumentDetailHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));

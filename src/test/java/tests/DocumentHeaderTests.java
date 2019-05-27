@@ -21,7 +21,7 @@ import static org.testng.Assert.assertEquals;
 public class DocumentHeaderTests extends TestBase {
 
     @Description("Document header positive")
-    @Test(dataProvider = "validDocHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    @Test(dataProvider = "validHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
     public void testDocumentHeaderHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
@@ -30,7 +30,7 @@ public class DocumentHeaderTests extends TestBase {
     }
 
     @Description("Document header negative")
-    @Test(dataProvider = "validDocHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    @Test(dataProvider = "validHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
     public void testDocumentHeaderHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));

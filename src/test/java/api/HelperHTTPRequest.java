@@ -20,7 +20,15 @@ public class HelperHTTPRequest extends APIBase {
 
     public int sendHeadersPost(EntityRequest entityRequest, String endPoint) throws IOException, IllegalAccessException, ClassNotFoundException, InstantiationException {
 
-        String body = String.format("{\"id\":\"%s\"}", app.getDocID());
+        String body;
+
+        if (endPoint.contains("document")){
+            body = String.format("{\"id\":\"%s\"}", app.getDocID());
+        }else  if (endPoint.contains("overView")){
+            body = String.format(" \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0}", app.getDocID());
+        }else {
+            body = String.format("{\"id\":\"%s\"}", app.getDocID());
+        }
 
         HashMap<String, String> mapHandle = new HashMap<>();
         mapHandle.put("address", endPoint);

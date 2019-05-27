@@ -1,0 +1,26 @@
+[
+  {
+    "testCase": "overviewNull null",
+    "code": 400,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": null,
+        "size": 0,
+        "page": 0
+      }
+    ]
+  },
+  {
+    "testCase": "overviewNull null in array",
+    "code": 400,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": ["144FA0","B52157","30C1AF07C3D",null],
+        "size": 0,
+        "page": 0
+      }
+    ]
+  }
+]

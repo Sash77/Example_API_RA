@@ -1,0 +1,47 @@
+[
+  {
+    "testCase": "docWellFormed negative no {",
+    "code": 400,
+    "wellformed": " \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0}"
+  },
+  {
+    "testCase": "docWellFormed negative no }",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0"
+  },
+  {
+    "testCase": "docWellFormed negative ,",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0,}"
+  },
+  {
+    "testCase": "docWellFormed negative cintrol out \"",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", control:\"%s\", \"size\": 0, \"page\": 0}"
+  },
+  {
+    "testCase": "docWellFormed negative value out \"",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"control\":%s, \"size\": 0, \"page\": 0}"
+  },
+  {
+    "testCase": "docWellFormed negative control is empty",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"control\":, \"size\": 0, \"page\": 0}"
+  },
+  {
+    "testCase": "docWellFormed negative Control big",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"Control\":\"%s\", \"size\": 0, \"page\": 0}"
+  },
+  {
+    "testCase": "docWellFormed negative ; instead :",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"control\";\"%s\", \"size\": 0, \"page\": 0}"
+  },
+  {
+    "testCase": "docWellFormed negative vice versa",
+    "code": 400,
+    "wellformed": "{ \"documentType\": \"ED\", \"%s\":\"control\", \"size\": 0, \"page\": 0}"
+  }
+]

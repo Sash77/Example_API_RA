@@ -1,6 +1,6 @@
 [
   {
-    "testCase": "docHeader negative content xml",
+    "testCase": "Header negative content xml",
     "code": 415,
     "head": [
       {
@@ -10,7 +10,7 @@
     ]
   },
   {
-    "testCase": "docHeader negative accept xml",
+    "testCase": "Header negative accept xml",
     "code": 406,
     "head": [
       {
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "testCase": "docHeader negative content/accept xml",
+    "testCase": "Header negative content/accept xml",
     "code": 415,
     "head": [
       {
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "testCase": "docHeader negative content \" \"",
+    "testCase": "Header negative content \" \"",
     "code": 400,
     "head": [
       {
@@ -40,8 +40,8 @@
     ]
   },
   {
-    "testCase": "docHeader negative accept \" \"",
-    "code": 200,
+    "testCase": "Header negative accept \" \"",
+    "code": 400,
     "head": [
       {
         "content-type": "application/json",

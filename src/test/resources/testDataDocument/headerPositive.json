@@ -1,6 +1,6 @@
 [
   {
-    "testCase": "docHeader positive",
+    "testCase": "Header positive",
     "code": 200,
     "head": [
       {
@@ -10,12 +10,12 @@
     ]
   },
   {
-    "testCase": "docHeader positive header is empty",
+    "testCase": "Header positive header is empty",
     "code": 200,
     "head": []
   },
   {
-    "testCase": "docHeader positive only content",
+    "testCase": "Header positive only content",
     "code": 200,
     "head": [
       {
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive only accept",
+    "testCase": "Header positive only accept",
     "code": 200,
     "head": [
       {
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive Content big",
+    "testCase": "Header positive Content big",
     "code": 200,
     "head": [
       {
@@ -43,7 +43,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive Accept big",
+    "testCase": "Header positive Accept big",
     "code": 200,
     "head": [
       {
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive content Json big",
+    "testCase": "Header positive content Json big",
     "code": 200,
     "head": [
       {
@@ -63,7 +63,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive accept Json big",
+    "testCase": "Header positive accept Json big",
     "code": 200,
     "head": [
       {
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive content Application",
+    "testCase": "Header positive content Application",
     "code": 200,
     "head": [
       {
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "testCase": "docHeader positive accept Application",
+    "testCase": "Header positive accept Application",
     "code": 200,
     "head": [
       {

@@ -61,15 +61,5 @@
         "id":"-144FA0"
       }
     ]
-  },
-  {
-    "testCase": "docBody negative id + name",
-    "code": 200,
-    "body": [
-      {
-        "id":"144FA0",
-        "name":"vasya"
-      }
-    ]
   }
 ]

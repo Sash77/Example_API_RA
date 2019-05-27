@@ -18,29 +18,29 @@ import static org.hamcrest.Matchers.*;
 import static org.testng.Assert.assertEquals;
 
 @Listeners(TestListener.class)
-public class DocumentTabTests extends TestBase {
+public class OverviewListTests extends TestBase {
 
-    @Description("Document tab positive")
+    @Description("Overview list positive")
     @Test(dataProvider = "validHeaderPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testOverviewListHeaderPositive(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
-        assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentTab), dataProvider.getCode());
+        assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.overViewList), dataProvider.getCode());
     }
 
-    @Description("Document tab negative")
+    @Description("Overview list negative")
     @Test(dataProvider = "validHeaderNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    public void testOverviewListHeaderNegative(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
-        assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.documentTab), dataProvider.getCode());
+        assertEquals(app.getHelperHTTPRequest().sendHeadersPost(dataProvider, EndPoints.overViewList), dataProvider.getCode());
     }
 
-    @Description("Document tab json schema validation")
-    @Test(dataProvider = "validDocJsonSchema", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabJsonSchema(EntityRequest dataProvider) {
+    @Description("Overview list json schema validation")
+    @Test(dataProvider = "validOverviewJsonSchema", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testOverviewListJsonSchema(EntityRequest dataProvider) {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
 
@@ -48,15 +48,16 @@ public class DocumentTabTests extends TestBase {
                 spec(app.getSpecificationRequest().getRequestRegular()).
                 body(app.getHelperHTTPRequest().getBodyInHashMap(dataProvider.getBody())).
                 when().
-                post(EndPoints.documentTab).
+                post(EndPoints.overViewList).
                 then().
                 assertThat().
-                body(matchesJsonSchemaInClasspath("schemaRawRecord.json"));
+                body(matchesJsonSchemaInClasspath("schemaRawSchema.json"));
+
     }
 
-    @Description("Document tab well formed negative")
-    @Test(dataProvider = "validDocWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabWellFormedNegative(EntityRequest dataProvider) {
+    @Description("Overview list well formed negative")
+    @Test(dataProvider = "validOverviewWellFormedNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testOverviewListWellFormedNegative(EntityRequest dataProvider) {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
 
@@ -64,16 +65,16 @@ public class DocumentTabTests extends TestBase {
                 spec(app.getSpecificationRequest().getRequestRegular()).
                 body(String.format(dataProvider.getWellFormed(), app.getDocID())).
                 when().
-                post(EndPoints.documentTab).
+                post(EndPoints.overViewList).
                 then().
                 assertThat().
                 statusCode(dataProvider.getCode());
 
     }
 
-    @Description("Document tab body positive")
-    @Test(dataProvider = "validDocBodyPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabBodyPositive(EntityRequest dataProvider) {
+    @Description("Overview list body positive")
+    @Test(dataProvider = "validOverviewBodyPositive", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testOverviewListBodyPositive(EntityRequest dataProvider) {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
 
@@ -81,7 +82,7 @@ public class DocumentTabTests extends TestBase {
                 spec(app.getSpecificationRequest().getRequestRegular()).
                 body(app.getHelperHTTPRequest().getBodyInHashMap(dataProvider.getBody())).
                 when().
-                post(EndPoints.documentTab).
+                post(EndPoints.overViewList).
                 then().
                 assertThat().
                 spec(app.getSpecificationResponse().getResponseRegular()).
@@ -96,9 +97,9 @@ public class DocumentTabTests extends TestBase {
 
     }
 
-    @Description("Document tab body negative")
-    @Test(dataProvider = "validDocBodyNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testDocumentTabBodyNegative(EntityRequest dataProvider) {
+    @Description("Overview list body negative")
+    @Test(dataProvider = "validOverviewBodyNegative", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testOverviewListBodyNegative(EntityRequest dataProvider) {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
 
@@ -106,7 +107,7 @@ public class DocumentTabTests extends TestBase {
                 spec(app.getSpecificationRequest().getRequestRegular()).
                 body(app.getHelperHTTPRequest().getBodyInHashMap(dataProvider.getBody())).
                 when().
-                post(EndPoints.documentTab).
+                post(EndPoints.overViewList).
                 then().
                 assertThat().
                 statusCode(dataProvider.getCode()).
@@ -115,13 +116,13 @@ public class DocumentTabTests extends TestBase {
 
     }
 
-    @Description("Document tab null test")
-    @Test(dataProvider = "validNullDoc", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
-    public void testTabNullInBody(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
+    @Description("Overview list null test")
+    @Test(dataProvider = "validNullOverview", dataProviderClass = DataProviderDocument.class, alwaysRun = true)
+    public void testOverviewListNullInBody(EntityRequest dataProvider) throws ClassNotFoundException, InstantiationException, IllegalAccessException, IOException {
 
         step(String.format("Test case: %s", dataProvider.getTestCase()));
         app.setCheck("Send request");
-        assertEquals(app.getHelperHTTPRequest().sendNullInBodyPost(dataProvider, EndPoints.documentDetail), dataProvider.getCode());
+        assertEquals(app.getHelperHTTPRequest().sendNullInBodyPost(dataProvider, EndPoints.overViewList), dataProvider.getCode());
     }
 
 }

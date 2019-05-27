@@ -1,0 +1,76 @@
+[
+  {
+    "testCase": "overviewJsonSchema positive",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": 0,
+        "page": 0
+      }
+    ]
+  },
+  {
+    "testCase": "overviewJsonSchema size 1 positive",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": 1,
+        "page": 0
+      }
+    ]
+  },
+  {
+    "testCase": "overviewJsonSchema page 1 positive",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": 0,
+        "page": 1
+      }
+    ]
+  },
+  {
+    "testCase": "overviewJsonSchema positive",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": -5,
+        "page": 0
+      }
+    ]
+  },
+  {
+    "testCase": "overviewJsonSchema positive",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": 0,
+        "page": -5
+      }
+    ]
+  },
+  ,
+  {
+    "testCase": "overviewJsonSchema positive id + name",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "name":"vasya",
+        "control": "144FA0",
+        "size": 0,
+        "page": 0
+      }
+    ]
+  }
+]
