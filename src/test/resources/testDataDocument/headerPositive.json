@@ -24,15 +24,6 @@
     ]
   },
   {
-    "testCase": "Header positive only accept",
-    "code": 200,
-    "head": [
-      {
-        "accept": "application/json"
-      }
-    ]
-  },
-  {
     "testCase": "Header positive Content big",
     "code": 200,
     "head": [
@@ -49,26 +40,6 @@
       {
         "content-type": "application/json",
         "Accept": "application/json"
-      }
-    ]
-  },
-  {
-    "testCase": "Header positive content Json big",
-    "code": 200,
-    "head": [
-      {
-        "content-type": "application/Json",
-        "accept": "application/json"
-      }
-    ]
-  },
-  {
-    "testCase": "Header positive accept Json big",
-    "code": 200,
-    "head": [
-      {
-        "content-type": "application/json",
-        "accept": "application/Json"
       }
     ]
   },

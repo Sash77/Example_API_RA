@@ -24,8 +24,8 @@ public class HelperHTTPRequest extends APIBase {
 
         if (endPoint.contains("document")){
             body = String.format("{\"id\":\"%s\"}", app.getDocID());
-        }else  if (endPoint.contains("overView")){
-            body = String.format(" \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0}", app.getDocID());
+        }else  if (endPoint.contains("overview")){
+            body = String.format("{ \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0}", app.getDocID());
         }else {
             body = String.format("{\"id\":\"%s\"}", app.getDocID());
         }

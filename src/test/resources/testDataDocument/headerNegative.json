@@ -48,5 +48,34 @@
         "accept": " "
       }
     ]
+  },
+  {
+    "testCase": "Header negative only accept",
+    "code": 415,
+    "head": [
+      {
+        "accept": "application/json"
+      }
+    ]
+  },
+  {
+    "testCase": "Header negative content Json big",
+    "code": 415,
+    "head": [
+      {
+        "content-type": "application/Json",
+        "accept": "application/json"
+      }
+    ]
+  },
+  {
+    "testCase": "Header negative accept Json big",
+    "code": 415,
+    "head": [
+      {
+        "content-type": "application/json",
+        "accept": "application/Json"
+      }
+    ]
   }
 ]
