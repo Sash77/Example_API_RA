@@ -1,0 +1,197 @@
+[
+  {
+    "testCase": "worklistSelection body positive short",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": ""
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive long",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "fieldName": "Number",
+        "fieldDescription": "",
+        "lowValue": "",
+        "highValue": "",
+        "operator": "EQUAL"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short EQUAL",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "EQUAL"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short NOT_EQUAL",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "NOT_EQUAL"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short BETWEEN",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "highValue": "",
+        "operator": "BETWEEN"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short GREATER",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "GREATER"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short GREATER_OR_EQUAL",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "GREATER_OR_EQUAL"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short LESSER",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "LESSER"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short LESSER_OR_EQUAL",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "LESSER_OR_EQUAL"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short ==",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "=="
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short !=",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "!="
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short <>",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "<>"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short >",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": ">"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short >=",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": ">="
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short <",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "<"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelection body positive short <=",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "lowValue": "",
+        "operator": "<="
+      }
+    ]
+  }
+]

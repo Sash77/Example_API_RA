@@ -1,0 +1,17 @@
+[
+  {
+    "testCase": "worklistSelectionJsonSchema ",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "string",
+        "fieldId": "string",
+        "fieldName": "string",
+        "fieldDescription": "string",
+        "lowValue": "string",
+        "lowValue": "string",
+        "operator": "EQUAL"
+      }
+    ]
+  }
+]

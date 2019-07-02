@@ -12,6 +12,30 @@
     ]
   },
   {
+    "testCase": "overviewJsonSchema positive doc id size",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": 1,
+        "page": 0
+      }
+    ]
+  },
+  {
+    "testCase": "overviewJsonSchema positive doc id page",
+    "code": 200,
+    "body": [
+      {
+        "documentType": "ED",
+        "control": "144FA0",
+        "size": 0,
+        "page": 1
+      }
+    ]
+  },
+  {
     "testCase": "overviewJsonSchema negative id doesn't exists",
     "code": 200,
     "body": [

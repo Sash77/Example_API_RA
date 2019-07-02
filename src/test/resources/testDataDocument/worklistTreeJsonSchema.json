@@ -1,0 +1,32 @@
+[
+  {
+    "testCase": "worklistSelectionJsonSchema main",
+    "code": 200,
+    "simple":true,
+    "body": [
+      {
+        "node": "main"
+      }
+    ]
+      },
+  {
+    "testCase": "worklistSelectionJsonSchema Dunkan",
+    "code": 200,
+    "simple":true,
+    "body": [
+      {
+        "node": "Dunkan"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistSelectionJsonSchema openWf",
+    "code": 200,
+    "simple":true,
+    "body": [
+      {
+        "node": "openWf"
+      }
+    ]
+  }
+]

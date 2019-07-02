@@ -15,7 +15,7 @@
     "wellformed": "{ \"documentType\": \"ED\", \"control\":\"%s\", \"size\": 0, \"page\": 0,}"
   },
   {
-    "testCase": "docWellFormed negative cintrol out \"",
+    "testCase": "docWellFormed negative control out \"",
     "code": 400,
     "wellformed": "{ \"documentType\": \"ED\", control:\"%s\", \"size\": 0, \"page\": 0}"
   },

@@ -1,0 +1,13 @@
+[
+  {
+    "testCase": "worklistTree null",
+    "code": 400,
+    "simple":true,
+    "shouldbe":["main"],
+    "body": [
+      {
+        "node": null
+      }
+    ]
+  }
+]

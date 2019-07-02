@@ -136,7 +136,7 @@ public abstract class APIBase {
         return Integer.parseInt(resultHandle[0]);
     }
 
-    protected int sendRequestHttpGet(HashMap<String, String> mapHandle, HashMap<String, String> mapParams, boolean dontExpectBody) throws IOException, IllegalAccessException, InstantiationException, ClassNotFoundException {
+    protected int sendRequestHttpGet(HashMap<String, String> mapHandle, HashMap<String, String> mapParams) throws IOException, IllegalAccessException, InstantiationException, ClassNotFoundException {
 
         app.setMessageToLog("");
 
@@ -146,15 +146,15 @@ public abstract class APIBase {
         //[3] content type
         //[4] short message
         final String resultHandle[] = new String[5];
-        final boolean dontExpectBodyHandle = dontExpectBody;
-        boolean isAcceptJson = false;
 
-        for (Map.Entry<String, String> itemMapParams : mapParams.entrySet()) {
-            if (itemMapParams.getKey().toLowerCase().contains("accept")) {
-                isAcceptJson = itemMapParams.getValue().contains("json");
-                break;
-            }
-        }
+//        boolean isAcceptJson = false;
+//
+//        for (Map.Entry<String, String> itemMapParams : mapParams.entrySet()) {
+//            if (itemMapParams.getKey().toLowerCase().contains("accept")) {
+//                isAcceptJson = itemMapParams.getValue().contains("json");
+//                break;
+//            }
+//        }
 
         logTrace("Create http request Get...");
         Request requestHTTP = requestHttpGet(String.format(app.getURL() + "%s", mapHandle.get("address")), mapParams);

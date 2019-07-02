@@ -1,0 +1,37 @@
+[
+  {
+    "testCase": "docWellFormed negative no first\"",
+    "code": 400,
+    "wellformed": "[\"Dunkan]"
+  },
+  {
+    "testCase": "docWellFormed negative no last\"",
+    "code": 400,
+    "wellformed": "[Dunkan\"]"
+  },
+  {
+    "testCase": "docWellFormed negative comma",
+    "code": 400,
+    "wellformed": "[\"Dunkan\",]"
+  },
+  {
+    "testCase": "docWellFormed negative no last]",
+    "code": 400,
+    "wellformed": "[\"Dunkan\""
+  },
+  {
+    "testCase": "docWellFormed negative no first [",
+    "code": 400,
+    "wellformed": "\"Dunkan\"]"
+  },
+  {
+    "testCase": "docWellFormed negative no []",
+    "code": 400,
+    "wellformed": "\"Dunkan\""
+  },
+  {
+    "testCase": "docWellFormed negative semicolon",
+    "code": 400,
+    "wellformed": "[\"Dunkan\";\"plain\"]"
+  }
+]

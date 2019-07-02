@@ -1,0 +1,356 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "active",
+    "children",
+    "control",
+    "description",
+    "documentCounter",
+    "documentType",
+    "hierarchyLevel",
+    "id",
+    "leaf",
+    "name",
+    "topNode"
+  ],
+  "properties": {
+    "active": {
+      "$id": "#/properties/active",
+      "type": "boolean",
+      "title": "The Active Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "children": {
+      "$id": "#/properties/children",
+      "type": "array",
+      "title": "The Children Schema",
+      "items": {
+        "$id": "#/properties/children/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "active",
+          "children",
+          "control",
+          "description",
+          "documentCounter",
+          "documentType",
+          "hierarchyLevel",
+          "id",
+          "leaf",
+          "name",
+          "topNode"
+        ],
+        "properties": {
+          "active": {
+            "$id": "#/properties/children/items/properties/active",
+            "type": "boolean",
+            "title": "The Active Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "children": {
+            "$id": "#/properties/children/items/properties/children",
+            "type": "array",
+            "title": "The Children Schema",
+            "items": {
+              "$id": "#/properties/children/items/properties/children/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "active",
+                "control",
+                "description",
+                "documentCounter",
+                "documentType",
+                "hierarchyLevel",
+                "id",
+                "leaf",
+                "name",
+                "topNode"
+              ],
+              "properties": {
+                "active": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/active",
+                  "type": "boolean",
+                  "title": "The Active Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "control": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/control",
+                  "type": "string",
+                  "title": "The Control Schema",
+                  "default": "",
+                  "examples": [
+                    "E1"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "description": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/description",
+                  "type": "string",
+                  "title": "The Description Schema",
+                  "default": "",
+                  "examples": [
+                    "Hot Seat Approval"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "documentCounter": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/documentCounter",
+                  "type": "integer",
+                  "title": "The Documentcounter Schema",
+                  "default": 0,
+                  "examples": [
+                    0
+                  ]
+                },
+                "documentType": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/documentType",
+                  "type": "string",
+                  "title": "The Documenttype Schema",
+                  "default": "",
+                  "examples": [
+                    "ED"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "hierarchyLevel": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/hierarchyLevel",
+                  "type": "integer",
+                  "title": "The Hierarchylevel Schema",
+                  "default": 0,
+                  "examples": [
+                    1
+                  ]
+                },
+                "id": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/id",
+                  "type": "string",
+                  "title": "The Id Schema",
+                  "default": "",
+                  "examples": [
+                    "Hot"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "leaf": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/leaf",
+                  "type": "boolean",
+                  "title": "The Leaf Schema",
+                  "default": false,
+                  "examples": [
+                    true
+                  ]
+                },
+                "name": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "HotSA"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "topNode": {
+                  "$id": "#/properties/children/items/properties/children/items/properties/topNode",
+                  "type": "boolean",
+                  "title": "The Topnode Schema",
+                  "default": false,
+                  "examples": [
+                    false
+                  ]
+                }
+              }
+            }
+          },
+          "control": {
+            "$id": "#/properties/children/items/properties/control",
+            "type": "string",
+            "title": "The Control Schema",
+            "default": "",
+            "examples": [
+              "D1"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "description": {
+            "$id": "#/properties/children/items/properties/description",
+            "type": "string",
+            "title": "The Description Schema",
+            "default": "",
+            "examples": [
+              "Eccentric Documents"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "documentCounter": {
+            "$id": "#/properties/children/items/properties/documentCounter",
+            "type": "integer",
+            "title": "The Documentcounter Schema",
+            "default": 0,
+            "examples": [
+              0
+            ]
+          },
+          "documentType": {
+            "$id": "#/properties/children/items/properties/documentType",
+            "type": "string",
+            "title": "The Documenttype Schema",
+            "default": "",
+            "examples": [
+              "ED"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "hierarchyLevel": {
+            "$id": "#/properties/children/items/properties/hierarchyLevel",
+            "type": "integer",
+            "title": "The Hierarchylevel Schema",
+            "default": 0,
+            "examples": [
+              1
+            ]
+          },
+          "id": {
+            "$id": "#/properties/children/items/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "default": "",
+            "examples": [
+              "ECC"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "leaf": {
+            "$id": "#/properties/children/items/properties/leaf",
+            "type": "boolean",
+            "title": "The Leaf Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "name": {
+            "$id": "#/properties/children/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "Eccentric"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "topNode": {
+            "$id": "#/properties/children/items/properties/topNode",
+            "type": "boolean",
+            "title": "The Topnode Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          }
+        }
+      }
+    },
+    "control": {
+      "$id": "#/properties/control",
+      "type": "string",
+      "title": "The Control Schema",
+      "default": "",
+      "examples": [
+        "A1"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "description": {
+      "$id": "#/properties/description",
+      "type": "string",
+      "title": "The Description Schema",
+      "default": "",
+      "examples": [
+        "Process Director Worklist"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "documentCounter": {
+      "$id": "#/properties/documentCounter",
+      "type": "integer",
+      "title": "The Documentcounter Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "documentType": {
+      "$id": "#/properties/documentType",
+      "type": "string",
+      "title": "The Documenttype Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "hierarchyLevel": {
+      "$id": "#/properties/hierarchyLevel",
+      "type": "integer",
+      "title": "The Hierarchylevel Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "default": "",
+      "examples": [
+        "main"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "leaf": {
+      "$id": "#/properties/leaf",
+      "type": "boolean",
+      "title": "The Leaf Schema",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "Main Node"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "topNode": {
+      "$id": "#/properties/topNode",
+      "type": "boolean",
+      "title": "The Topnode Schema",
+      "default": false,
+      "examples": [
+        true
+      ]
+    }
+  }
+}

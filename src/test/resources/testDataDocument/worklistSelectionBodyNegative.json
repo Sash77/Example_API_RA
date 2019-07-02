@@ -1,0 +1,17 @@
+[
+  {
+    "testCase": "worklistSelection body negative short",
+    "code": 200,
+    "body": [
+      {
+        "workListId": "main",
+        "fieldId": "DocNo",
+        "fieldName": "Number",
+        "fieldDescription": "",
+        "lowValue": "",
+        "highValue": "",
+        "operator": "EQUAL"
+      }
+    ]
+  }
+]

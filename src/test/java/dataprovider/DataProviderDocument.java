@@ -84,6 +84,40 @@ public class DataProviderDocument {
     }
 
     @DataProvider
+    public Iterator<Object[]> validWorklistSelectionWellFormedNegative() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistSelectionWellFormedNegative.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validWorklistTreeWellFormedNegative() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistTreeWellFormedNegative.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
     public Iterator<Object[]> validDocJsonSchema() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/docJsonSchema.json")))) {
             String json = "";
@@ -103,6 +137,40 @@ public class DataProviderDocument {
     @DataProvider
     public Iterator<Object[]> validOverviewJsonSchema() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/overviewJsonSchema.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validWorklistSelectionJsonSchema() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistSelectionJsonSchema.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validWorklistTreeJsonSchema() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistTreeJsonSchema.json")))) {
             String json = "";
             String line = reader.readLine();
             while (line != null) {
@@ -152,6 +220,40 @@ public class DataProviderDocument {
     }
 
     @DataProvider
+    public Iterator<Object[]> validWorklistSelectionBodyPositive() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistSelectionBodyPositive.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validWorklistTreeBodyPositive() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistTreeBodyPositive.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
     public Iterator<Object[]> validDocBodyNegative() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/docBodyNegative.json")))) {
             String json = "";
@@ -186,6 +288,40 @@ public class DataProviderDocument {
     }
 
     @DataProvider
+    public Iterator<Object[]> validWorklistSelectionBodyNegative() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistSelectionBodyNegative.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validWorklistTreeBodyNegative() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistTreeBodyNegative.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
     public Iterator<Object[]> validNullDoc() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/docNull.json")))) {
             String json = "";
@@ -205,6 +341,40 @@ public class DataProviderDocument {
     @DataProvider
     public Iterator<Object[]> validNullOverview() throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/overviewNull.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validNullWorklistSelection() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistSelectionNull.json")))) {
+            String json = "";
+            String line = reader.readLine();
+            while (line != null) {
+                json += line;
+                line = reader.readLine();
+            }
+            Gson gson = new Gson();
+            List<EntityRequest> entityRequests = gson.fromJson(json, new TypeToken<List<EntityRequest>>() {
+            }.getType());
+            return entityRequests.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+
+        }
+    }
+
+    @DataProvider
+    public Iterator<Object[]> validNullWorklistTree() throws IOException {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/testDataDocument/worklistTreeNull.json")))) {
             String json = "";
             String line = reader.readLine();
             while (line != null) {

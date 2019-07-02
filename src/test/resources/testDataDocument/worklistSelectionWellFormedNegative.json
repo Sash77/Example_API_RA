@@ -1,0 +1,47 @@
+[
+  {
+    "testCase": "docWellFormed negative no {",
+    "code": 400,
+    "wellformed": " \"workListId\": \"%s\", \"fieldId\": \"%s\", \"lowValue\": \"\"}"
+  },
+  {
+    "testCase": "docWellFormed negative no }",
+    "code": 400,
+    "wellformed": "{ \"workListId\": \"%s\", \"fieldId\": \"%s\", \"lowValue\": \"\""
+  },
+  {
+    "testCase": "docWellFormed negative ,",
+    "code": 400,
+    "wellformed": "{ \"workListId\": \"%s\", \"fieldId\": \"%s\",\"lowValue\": \"\",}"
+  },
+  {
+    "testCase": "docWellFormed negative workListId out \"",
+    "code": 400,
+    "wellformed": "{ workListId: \"%s\", \"fieldId\": \"%s\", \"lowValue\": \"\"}"
+  },
+  {
+    "testCase": "docWellFormed negative value out \"",
+    "code": 400,
+    "wellformed": "{ \"workListId\": \"%s, \"fieldId\": \"%s\", \"lowValue\": \"\"}"
+  },
+  {
+    "testCase": "docWellFormed negative workListId is empty",
+    "code": 400,
+    "wellformed": "{ \"workListId\": , \"fieldId\": \"%s\", \"lowValue\": \"\"}"
+  },
+  {
+    "testCase": "docWellFormed negative WorkListId big",
+    "code": 400,
+    "wellformed": "{ \"WorkListId\": \"%s\", \"fieldId\": \"%s\",\"lowValue\": \"\"}"
+  },
+  {
+    "testCase": "docWellFormed negative ; instead :",
+    "code": 400,
+    "wellformed": "{ \"workListId\"; \"%s\", \"fieldId\": \"%s\",\"lowValue\": \"\"}"
+  },
+  {
+    "testCase": "docWellFormed negative vice versa",
+    "code": 400,
+    "wellformed": "{ \"%s\": \"workListId\", \"fieldId\": \"%s\", \"lowValue\": \"\"}"
+  }
+]

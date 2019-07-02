@@ -20,6 +20,7 @@ public class ApplicationManager {
     private String apiBaseURL;
     private int apiPort;
     private String docID;
+    private String nodeToTest;
     private String apiToken;
 
     private JavaRunCommand javaRunCommand;
@@ -49,6 +50,7 @@ public class ApplicationManager {
         apiBaseURL = properties.getProperty("auth.URL");
         apiPort = Integer.parseInt(properties.getProperty("auth.Port"));
         docID = properties.getProperty("data.docId");
+        nodeToTest = properties.getProperty("data.nodeToTest");
 
         javaRunCommand = new JavaRunCommand();
         specificationRequest = new SpecificationRequest(this);
@@ -89,6 +91,10 @@ public class ApplicationManager {
 
     public String getDocID() {
         return docID;
+    }
+
+    public String getNodeToTest() {
+        return nodeToTest;
     }
 
     public JavaRunCommand getJavaRunCommand() {

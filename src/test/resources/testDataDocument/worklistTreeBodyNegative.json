@@ -1,0 +1,82 @@
+[
+  {
+    "testCase": "worklistTree body negative empty",
+    "code": 400,
+    "simple": true,
+    "body": [
+      {
+        "node": ""
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative space",
+    "code": 400,
+    "simple": true,
+    "body": [
+      {
+        "node": " "
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative 0",
+    "code": 400,
+    "simple": true,
+    "body": [
+      {
+        "node": 0
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative pepe",
+    "code": 400,
+    "simple": true,
+    "body": [
+      {
+        "node": "pepe"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative 123456789",
+    "code": 400,
+    "simple":true,
+    "body": [
+      {
+        "node": 123456789
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative #url?",
+    "code": 400,
+    "simple":true,
+    "body": [
+      {
+        "node": "#url?"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative Plain",
+    "code": 400,
+    "simple":true,
+    "body": [
+      {
+        "node": "Plain"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body negative plain,pepe",
+    "code": 400,
+    "simple":true,
+    "body": [
+      {
+        "node": "plain,pepe"
+      }
+    ]
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "testCase": "worklistTree body positive main node",
+    "code": 200,
+    "simple":true,
+    "shouldbe":["main"],
+    "body": [
+      {
+        "node": "main"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body positive 1 node",
+    "code": 200,
+    "simple":true,
+    "shouldbe":["plain","main"],
+    "body": [
+      {
+        "node": "plain"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body positive 2 different nodes",
+    "code": 200,
+    "simple":true,
+    "shouldbe":["plain","Dunkan","main"],
+    "body": [
+      {
+        "node": "plain,Dunkan"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body positive 2 same nodes",
+    "code": 200,
+    "simple":true,
+    "shouldbe":["plain","main"],
+    "body": [
+      {
+        "node": "plain,plain"
+      }
+    ]
+  },
+  {
+    "testCase": "worklistTree body positive 20 same nodes",
+    "code": 200,
+    "simple":true,
+    "shouldbe":["plain","main"],
+    "body": [
+      {
+        "node": "plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain,plain"
+      }
+    ]
+  }
+]
