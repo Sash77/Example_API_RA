@@ -108,7 +108,7 @@ public class HelperHTTPRequest extends APIBase {
     public List<String> getSchemaTypeList() {
         return Arrays.asList(SchemaType.values()).stream().//pass array in stream
                 map(l -> new String(l.name())).//for each array's item create string and put there name of enum
-                collect(Collectors.toList());//create list of strings with names of enums data
+                collect(Collectors.toList());//create list of strings with names of enums data.
     }
 
 }
